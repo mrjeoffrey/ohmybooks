@@ -1,24 +1,24 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+:root {
+  --navtext: 'Poppins', sans-serif;
+  --white: #E8E8E8;
+  --red: #F05454;
+  --navy: #30475E;
+  --darkcolor: #222831;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+body {
+  background-color: var(--white);
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+.navbar {
+  font-family: var(--navtext);
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+/* section cover */
+.sectioncvr {
+  background-color: var(--navy);
+}
+
+.titlebtn {
+  color: var(--white);
 }
