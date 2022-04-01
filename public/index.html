@@ -24,72 +24,68 @@
 
 </head>
 
-<!-- header background -->
-<figure class="image is-128x128">
-    <img src="img/pexels-photo-1396122.jpeg" >
-</figure>
-
 <body>
 
     <!-- navbar -->
-    <nav class="navbar" role="navigation">
-        <!-- logo input -->
-        <div class="navbar-start">
-            <a class="navbar-item image is-128x">
-              <img class="has-ratio" src="./img/logo.png" alt="logo">
+    <nav class="navbar is-mobile is-desktop">
+      <!-- logo input -->
+      <div class="navbar-brand navbar-start">
+          <a class="navbar-item image is-128x128 logo">
+            <!-- <img class="has-ratio" src="./img/logo.png" alt="logo"> -->
+          </a>
+      </div>
+
+      <!-- menu -->
+      <div class="navbar-end has-dropdown is-hoverable">
+        <a class="navbar-item" href="#home">
+            Home
+        </a>
+        <a class="navbar-item" href="#github">
+            Github
+        </a>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Apply Now!</strong>
             </a>
+            <a class="button">
+              Log in
+            </a>
+          </div>
         </div>
 
-        <!-- menu -->
-        <div class="navbar-end has-dropdown is-hoverable">
-            <a class="navbar-item" href="#home">
-                Home
-            </a>
-            <a class="navbar-item" href="#about">
-                About
-            </a>
-            
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Contact Us
-                </a>
-            
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    Github
-                  </a>
-                  <a class="navbar-item">
-                    Elements
-                  </a>
-                  <a class="navbar-item">
-                    Components
-                  </a>
-                  <hr class="navbar-divider">
-                  <div class="navbar-item">
-                    Version 0.9.3
-                  </div>
-                </div>
-              </div>
-            
-        </div>
+      </div>
 
+      <!-- <div class="navbar-brand is-active">
+        
+        <a class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div> -->
     </nav>
 
+    
+
     <!-- cover -->
-    <section class="hero is-danger is-fullheight" img src="img/pexels-photo-1396122.jpeg" alt="Placeholder image">" >
-      <div class="sectioncvr hero-body">
+    <section class="hero is-dark has-background sectioncvr">
+      
+      <img src="./img/pexels-photo-1396122.jpeg" class="hero-background is-transparent is5by4">
+      
+      <div class="hero-body container">
         <div class="">
-          <p class="title">
+          <h1 class="title titlebtn">
             What are you looking for?
-          </p>
-          <p class="subtitle">
+          </h1>
+          <p class="subtitle titlebtn">
             Fullheight subtitle
           </p>
           <a id="house"><i class="titlebtn fa-solid fa-house fa-2xl"></i></a>
           <a id="insurance"><i class="titlebtn fa-solid fa-file-shield fa-2xl"></i></a>
-          
         </div>
       </div>
+
     </section>
 
     <!-- section -->
@@ -100,28 +96,99 @@
       </h2>
     </section>
 
-      <!-- media card section for our names    -->
-      <div class="columns">
-        <div class="column">
-          <div class="card">
+    
+    <!-- media card section for our names    -->
+    <section class="columns is-mobile is-desktop">
+      <!-- media card 1  -->
+      <div class="column">
+        <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
               </figure>
             </div>
+            
             <div class="card-content">
-            <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-              </figure>
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
                 </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- media card 2 -->
+      <div class="column">
+        <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- media card 3 -->
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+          </div>
+
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                </figure>
+              </div>
+            
               <div class="media-content">
                 <p class="title is-4">John Smith</p>
                 <p class="subtitle is-6">@johnsmith</p>
               </div>
             </div>
 
+      
             <div class="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Phasellus nec iaculis mauris. <a>@bulmaio</a>.
@@ -130,130 +197,77 @@
               <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
             </div>
           </div>
+
         </div>
       </div>
-<!-- media card 1  -->
-        <div class="column">
-          <div class="card">
-      <div class="card-image">
-      <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-      </figure>
-      </div>
-      <div class="card-content">
-      <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
-      </div>
-<!-- media card 2 -->
-      <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </div>
-      </div>
-      </div>
-        </div>
-        <div class="column">
+
+      <!-- media card 4  -->
+      <div class="column">
         <div class="card">
-      <div class="card-image">
-      <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-      </figure>
-      </div>
-      <div class="card-content">
-      <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
-      </div>
-<!-- media card 3  -->
-      <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </div>
-      </div>
-      </div>
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
         </div>
-        <div class="column">
-          <div class="card">
-      <div class="card-image">
-      <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-      </figure>
       </div>
-      <div class="card-content">
-      <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
-      </div>
-<!-- media card 4  -->
-      <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </div>
-      </div>
-      </div>
-        </div>
-        <div class="column">
+
+      <!-- media card 5  -->
+      <div class="column">
         <div class="card">
-      <div class="card-image">
-      <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-      </figure>
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="card-content">
-      <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
-      </div>
-<!-- media card 5  -->
-      <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-      </div>
-      </div>
-      </div>
-          </div>
-      </div>
+      
+
     </section>
 
     <!-- main javascript -->

@@ -1,7 +1,10 @@
 :root {
   --navtext: 'Poppins', sans-serif;
-  --white: #E8E8E8;
+  --white: #F8F1F1;
+  --orange: #EB5E0B;
   --red: #F05454;
+  --teal: #A3D2CA;
+  --bgreen: #5EAAA8;
   --navy: #30475E;
   --darkcolor: #222831;
 }
@@ -14,7 +17,30 @@ body {
   font-family: var(--navtext);
 }
 
+.logo {
+  background: url(../img/logo.png);
+  background-size: cover;
+}
+
 /* section cover */
+.hero,
+.has-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  object-fit: cover;
+  object-position: center; 
+}
+
+.is-transparent {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+    
 .sectioncvr {
   background-color: var(--navy);
 }
@@ -22,3 +48,7 @@ body {
 .titlebtn {
   color: var(--white);
 }
+
+/* @media screen and (max-width: 941px){
+  
+} */
