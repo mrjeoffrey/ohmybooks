@@ -1,0 +1,22 @@
+:root {
+    --navtext: 'Poppins', sans-serif;
+    --beige: #f3ece6;
+    --lightbrown: #d7c8b5;
+    --darkbrown: #e4d6c6;
+    --yellow: #fdd28a;
+    --red: #ef7e6b;
+    --teal: #98d4e1;
+}
+
+.text {
+    color: var(--beige);
+}
+  
+.card {
+    background: url(../img/background2.jpg);
+}
+
+.cardcvr {
+    background: url(../img/background3.jpg);
+    background-size: cover;
+}
