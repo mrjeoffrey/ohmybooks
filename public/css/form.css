@@ -9,10 +9,13 @@
 
 }
 section{
+    background-size: cover;
     position: relative;
     min-height: 100vh;
-    background-image: url("../img/home.jpeg");
+    background-image: url("../img/bookshelf2.jpg");
     background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
 }
 .container{
     margin: 0 14%; 
@@ -46,7 +49,7 @@ section{
     border-bottom-color: #000000;
     border-right-color: #000000;
     border-radius: 8px;
-    backdrop-filter:blur(5px);
+    backdrop-filter:blur(30px);
 }
 .login h4{
     font-size: 20px; 
