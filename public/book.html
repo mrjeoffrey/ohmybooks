@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/book.css">
+
+    <!-- bulma link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/f513bbdf7f.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="has-navbar-fixed-top">
+    
+    <!-- navbar -->
+    <nav class="navbar is-transparent is-fixed-top">
+        <!-- logo input -->
+        <div class="navbar-brand navbar-start">
+            <a class="navbar-item image is-128x128 logo">
+              <!-- <img class="has-ratio" src="./img/logo.png" alt="logo"> -->
+            </a>
+        </div>
+  
+        <!-- genre menu -->
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-item" href="#home">
+              Home
+            </a>
+            <a class="navbar-item" href="#github">
+                Github
+            </a>
+            <a class="navbar-link">
+              Genre
+            </a>
+    
+            <div class="navbar-dropdown">
+              <div class="columns">
+                <a class="navbar-item column">
+                  Action
+                </a>
+                <a class="navbar-item column">
+                  Adventure
+                </a>
+              </div>
+              <div class="columns">
+                <a class="navbar-item column">
+                  Classics
+                </a>
+                <a class="navbar-item column">
+                  Fantasy
+                </a>
+              </div>
+              <div class="columns">
+                <a class="navbar-item column">
+                  Graphic Novel
+                </a>
+                <a class="navbar-item column">
+                  Horror
+                </a>
+              </div>
+              <div class="columns">
+                <a class="navbar-item column">
+                  Mystery/Thriller
+                </a>
+                <a class="navbar-item column">
+                  Non-Fiction
+                </a>
+              </div>
+              <div class="columns">
+                <a class="navbar-item column">
+                  Romance
+                </a>
+                <a class="navbar-item column">
+                  Science Fiction
+                </a>
+              </div>
+              
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+  
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </nav>
+
+      <section class="section mt-6 pt-6">
+        <h1 class="title">Section</h1>
+        <h2 class="subtitle">
+          A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+        </h2>
+      </section>
+
+    <!-- card for book sections -->
+    <section class="columns">
+        <div class="hero">
+            <a class="hero-background image is-3by1 cardcvr">
+                <!-- <img src="./img/background2.jpg"> -->
+            </a>
+        </div>
+        
+        <div class="column is-6 cardcvr card is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                  </figure>
+                </div>
+            </div>
+            <header class="card-header text">
+              <p class="card-header-title text">
+                Component
+              </p>
+              <button class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </header>
+            <div class="card-content text">
+                <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                    <br>
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                </div>
+            </div>
+            <footer class="card-footer text">
+              <a href="#" class="card-footer-item text"><strong>Save</strong></a>
+              <a href="#" class="card-footer-item text"><strong>Edit</strong>></a>
+              <a href="#" class="card-footer-item text"><strong>Delete</strong>></a>
+            </footer>
+          </div>
+    </section>
+
+    <!-- book cards -->
+    <section class="section is-medium">
+        <h1 class="title">Medium section</h1>
+        <h2 class="subtitle">
+            A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+        </h2>
+    </section>
+
+    <section class="columns">
+        <div class="card column">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+            </div>
+            </div>
+            <div class="card column">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+            </div>
+            </div>
+            <div class="card column">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+            </div>
+            </div>
+            <div class="card column">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+            </div>
+            </div>
+    </section>
+    
+    <!-- footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+</body>
+</html>
