@@ -1,1 +1,1 @@
-INSERT INTO books 
+INSERT INTO ohmybooks_db 

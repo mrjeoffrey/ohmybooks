@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS books_db;
+DROP DATABASE IF EXISTS ohmybooks_db;
 
-CREATE DATABASE books_db;
+CREATE DATABASE ohmybooks_db;
 
-USE books_db;
+USE ohmybooks_db;
 
 
 
