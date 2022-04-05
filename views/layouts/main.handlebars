@@ -1,72 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homerunner Real Estate</title>
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-zed.css">
+    <link rel="stylesheet" href="./css/jass.css">
+
+    <!-- bulma link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/f513bbdf7f.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
-  <!-- navbar -->
-    <nav class="navbar" role="navigation">
-        <!-- logo input -->
-        <div class="navbar-start">
-            <a class="navbar-item image is-128x">
-              <img class="has-ratio" src="./img/logo.png" alt="logo">
-            </a>
-        </div>
+<body class="has-navbar-fixed-top">
 
-        <!-- menu -->
-        <div class="navbar-end has-dropdown is-hoverable">
-            <a class="navbar-item" href="#home">
-                Home
+
+    <!-- navbar -->
+    <nav class="navbar is-transparent is-fixed-top">
+      <!-- logo input -->
+      <div class="navbar-brand navbar-start">
+          <a class="navbar-item image is-128x128 logo">
+            <!-- <img class="has-ratio" src="./img/logo.png" alt="logo"> -->
+          </a>
+      </div>
+
+      <!-- genre menu -->
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a class="navbar-item" href="#home">
+            Home
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Genre
             </a>
-            <a class="navbar-item" href="#about">
-                About
-            </a>
-            
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Contact Us
-                </a>
-            
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    Github
-                  </a>
-                  <a class="navbar-item">
-                    Elements
-                  </a>
-                  <a class="navbar-item">
-                    Components
-                  </a>
-                  <hr class="navbar-divider">
-                  <div class="navbar-item">
-                    Version 0.9.3
-                  </div>
-                </div>
-              </div>
-            
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Action
+              </a>
+              <a class="navbar-item">
+                Adventure
+              </a>
+              <a class="navbar-item">
+                Classics
+              </a>
+              <a class="navbar-item">
+                Fantasy
+              </a>
+              <a class="navbar-item">
+                Graphic Novel
+              </a>
+              <a class="navbar-item">
+                Horror
+              </a>
+              <a class="navbar-item">
+                Mystery/Thriller
+              </a>
+              <a class="navbar-item">
+                Non-Fiction
+              </a>
+              <a class="navbar-item">
+                Romance
+              </a>
+              <a class="navbar-item">
+                Science Fiction
+              </a>
+            </div>
+
+            <!-- search bar -->
+            <div class="navbar-item">
+              <input class="input" type="text" placeholder="Search">
+            </div>
+
+          
         </div>
+      </div>
+
+      {{#if logged_in}}
+        <a href="/book">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+      {{else}}
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="/login" class="button">
+            Log in
+          </a>
+        </div>
+      </div>
+
+  {{/if}}
 
     </nav>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+    <!-- tabs -->
+
+    <!-- section -->
+    <!-- comment area for reviews -->
+    
+    <!-- media card section for our names    -->
+    <hr>
+
+
+    <br>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
+    </footer>
+
+    <!-- main javascript -->
+    <script src="./js/index.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/profile.js"></script>
+
+
+</body>
+
+</html>
+{{!-- 
+{{#if logged_in}}
+  <a href="/book">profile</a> |
+  <button class="no-button" id="logout">logout</button>
+  {{else}}
+  <a href="/login">login</a>
+
+  {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -84,4 +177,4 @@
   {{/if}}
 </body>
 
-</html>
+</html> --}}

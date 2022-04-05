@@ -77,7 +77,8 @@ section{
     padding: 4px 3px; 
     outline: none; 
 }
-.inputbox span{
+.username,
+.password {
     position: absolute;
     left: 2px; 
     bottom: 40px; 
