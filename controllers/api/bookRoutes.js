@@ -3,7 +3,6 @@ const Book = require('../../models/Books');
 // const withAuth = require('../../utils/auth');
 
 // CREATE a book
-
 router.post('/', async (req, res) => {
   try {
     const newBook = await Book.create({
@@ -17,6 +16,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// DELETE a book
 router.delete('/:id', async (req, res) => {
   try {
     const bookData = await Book.destroy({
