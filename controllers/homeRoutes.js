@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { Project, User, Book } = require('../models');
+const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
+const Book = require('')
 
 router.get('/', async (req, res) => {
   try {
@@ -18,18 +19,18 @@ router.get('/', async (req, res) => {
     const projects = projectData.map((project) => project.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
-      projects,
-      logged_in: req.session.logged_in,
+    res.render('homepage', { 
+      projects, 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/book/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const bookData = await Project.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,11 +39,11 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const books = bookData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
-      logged_in: req.session.logged_in,
+    res.render('book', {
+      ...books,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -50,7 +51,7 @@ router.get('/project/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/book', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -60,9 +61,9 @@ router.get('/book', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('book', {
+    res.render('profile', {
       ...user,
-      logged_in: true,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
