@@ -7,28 +7,25 @@ Book.init(
   {
     book_id: {
       type: DataTypes.INTEGER,
-
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    Title: {
+      type: DataTypes.TEXT('long'),
+    },
+    Description: {
+      type: DataTypes.TEXT('long'),
+    },
+    ISBN: {
       type: DataTypes.STRING,
     },
-    description: {
+    Genre: {
       type: DataTypes.STRING,
     },
-    isbn: {
-      type: DataTypes.INTEGER,
-
-      defaultValue: DataTypes.NOW,
-    },
-    genre: {
+    Author: {
       type: DataTypes.STRING,
     },
-    author: {
-      type: DataTypes.STRING,
-    },
-    publication: {
+    Publication: {
       type: DataTypes.STRING,
     },
     Rating: {
