@@ -34,6 +34,9 @@ Book.init(
     Comment: {
       type: DataTypes.STRING,
     },
+    Image: {
+      type: DataTypes.STRING,
+    },
   },
   {
     sequelize,
