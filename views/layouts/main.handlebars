@@ -26,94 +26,86 @@
 
 <body class="has-navbar-fixed-top">
 
+  <!-- navbar -->
+  <nav class="navbar is-transparent is-fixed-top">
+    <!-- logo input -->
+    <div class="navbar-brand navbar-start">
+        <a class="navbar-item image is-128x128 logo">
+          <!-- <img class="has-ratio" src="./img/logo.png" alt="logo"> -->
+        </a>
+    </div>
 
-    <!-- navbar -->
-    <nav class="navbar is-transparent is-fixed-top">
-      <!-- logo input -->
-      <div class="navbar-brand navbar-start">
-          <a class="navbar-item image is-128x128 logo">
-            <!-- <img class="has-ratio" src="./img/logo.png" alt="logo"> -->
-          </a>
-      </div>
-
-      <!-- genre menu -->
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a class="navbar-item" href="#home">
-            Home
-          </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Genre
-            </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Action
-              </a>
-              <a class="navbar-item">
-                Adventure
-              </a>
-              <a class="navbar-item">
-                Classics
-              </a>
-              <a class="navbar-item">
-                Fantasy
-              </a>
-              <a class="navbar-item">
-                Graphic Novel
-              </a>
-              <a class="navbar-item">
-                Horror
-              </a>
-              <a class="navbar-item">
-                Mystery/Thriller
-              </a>
-              <a class="navbar-item">
-                Non-Fiction
-              </a>
-              <a class="navbar-item">
-                Romance
-              </a>
-              <a class="navbar-item">
-                Science Fiction
-              </a>
-            </div>
-
-            <!-- search bar -->
-            <div class="navbar-item">
-              <input class="input" type="text" placeholder="Search">
-            </div>
-
-          
-        </div>
-      </div>
-
-      {{#if logged_in}}
-        <a href="/book">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-      {{else}}
+    <!-- genre menu -->
+    <div class="navbar-end">
       <div class="navbar-item">
-        <div class="buttons">
-          <a href="/login" class="button">
-            Log in
+        <a class="navbar-item" href="#home">
+          Home
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Genre
           </a>
-        </div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Action
+            </a>
+            <a class="navbar-item">
+              Adventure
+            </a>
+            <a class="navbar-item">
+              Classics
+            </a>
+            <a class="navbar-item">
+              Fantasy
+            </a>
+            <a class="navbar-item">
+              Graphic Novel
+            </a>
+            <a class="navbar-item">
+              Horror
+            </a>
+            <a class="navbar-item">
+              Mystery/Thriller
+            </a>
+            <a class="navbar-item">
+              Non-Fiction
+            </a>
+            <a class="navbar-item">
+              Romance
+            </a>
+            <a class="navbar-item">
+              Science Fiction
+            </a>
+          </div>
+
+          <!-- search bar -->
+          <div class="navbar-item">
+            <input class="input" type="text" placeholder="Search">
+          </div>
+
+        
       </div>
+    </div>
 
-  {{/if}}
+    {{#if logged_in}}
+      <a href="/book">profile</a> |
+      <button class="no-button" id="logout">logout</button>
+    {{else}}
+    <div class="navbar-item">
+      <div class="buttons">
+        <a href="/login" class="button">
+          Log in
+        </a>
+      </div>
+    </div>
 
-    </nav>
+    {{/if}}
 
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
+  </nav>
+
+  <!-- Render the sub layout -->
+  {{{ body }}}
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}

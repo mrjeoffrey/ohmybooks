@@ -12,7 +12,7 @@
                 <!-- <img src="./img/background2.jpg"> -->
             </a>
         </div>
-        
+        {{#each books as |books|}}
         <div class="column is-3 cardcvr card is-offset-2">
           <div class="column">
             <div class="card">
@@ -25,8 +25,8 @@
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
-                      <p class="title is-4">John Smith</p>
-                      <p class="subtitle is-6">@johnsmith</p>
+                      <p class="title is-4">{{books_title}}</p>
+                      <p class="subtitle is-6">{{books_author}}</p>
                     </div>
                   </div>
     
