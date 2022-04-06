@@ -1,6 +1,17 @@
 /* importing the google api poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Lobster&family=Neonderthaw&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --navtext: 'Poppins', sans-serif;
+    --beige: #f3ece6;
+    --lightbrown: #d7c8b5;
+    --darkbrown: #e4d6c6;
+    --yellow: #fdd28a;
+    --red: #ef7e6b;
+    --teal: #98d4e1;
+
+}
+
 *{
     padding: 0;
     margin: 0; 
@@ -40,9 +51,9 @@
     text-align: center; 
     box-shadow: 3px 6px 30px 8px rgb(58 58 58 / 15%); 
     background: rgb(0, 52, 134 / 50%);
-    right: 15%; 
-    bottom: 20%;
-    height: 57%; 
+    right: 5%; 
+    top: 35%;
+    height: 83%; 
     border: 1px solid; 
     border-top-color: #59aaff;
     border-left-color: #59aaff;
@@ -104,4 +115,18 @@
     background-color: #cfee21;
     box-shadow: 0 3px 8px 2px rgb(99 99 99 / 30%); 
     transition: all 0.2s ease-in-out;
+}
+.signup:hover{
+    color: var(--red);
+    font-weight: bold;
+    text-decoration: none;
+}
+.signup,
+#signup {
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 15px;
+    color: rgb(241, 84, 63);
+    font-weight: 3%;
+    text-decoration: none;
 }

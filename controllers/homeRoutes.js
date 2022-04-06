@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
-const books = require('../seeds/bookData.json')
 
 router.get('/', async (req, res) => {
   try {
@@ -34,25 +33,15 @@ router.get('/book/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: [
-            'ID',
-            'Title',
-            'Description',
-            'ISBN',
-            'Genre',
-            'Author',
-            'Publication',
-            'Rating',
-            'Comment',
-          ],
+          attributes: ['name'],
         },
       ],
     });
 
-    const books = bookData.get({ plain: true });
+    const book = bookData.get({ plain: true });
 
     res.render('book', {
-      ...books,
+      ...book,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -89,5 +78,9 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
+})
 
 module.exports = router;
