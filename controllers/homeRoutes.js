@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
-// const Book = require('')
+const books = require('../seeds/bookData.json')
 
 router.get('/', async (req, res) => {
   try {
@@ -34,7 +34,17 @@ router.get('/book/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: [
+            'ID',
+            'Title',
+            'Description',
+            'ISBN',
+            'Genre',
+            'Author',
+            'Publication',
+            'Rating',
+            'Comment',
+          ],
         },
       ],
     });
