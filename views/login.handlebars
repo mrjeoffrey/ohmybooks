@@ -1,11 +1,5 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oh my, Books!</title>
-    <link rel="stylesheet" href="css/form.css">
-</head>
+<link rel="stylesheet" href="css/form.css">
+
 <!-- base login form  -->
 <body>
     <section class="loginsctn">
@@ -140,7 +134,7 @@
                   </div>
                 </article>
                 
-                {{!-- {{#if logged_in}} --}}
+                {{#if logged_in}}
                 <article class="media">
                   <figure class="media-left">
                     <p class="image is-64x64">
@@ -160,7 +154,9 @@
                     </div>
                   </div>
                 </article>
-                {{!-- {{#/if}} --}}
+                {{else}}
+                    <a href="/login">You must login before you can comment.</a>
+                {{/if}}
               </div>
             </div>
           </div>
@@ -261,7 +257,7 @@
                   </div>
                 </article>
                 
-                {{!-- {{#if logged_in}} --}}
+                {{#if logged_in}}
                 <article class="media">
                   <figure class="media-left">
                     <p class="image is-64x64">
@@ -281,7 +277,9 @@
                     </div>
                   </div>
                 </article>
-                {{!-- {{#/if}} --}}
+                {{else}}
+                    <a href="/login">You must login before you can comment.</a>
+                {{/if}}
               </div>
             </div>
           </div>
@@ -382,7 +380,7 @@
                   </div>
                 </article>
                 
-                {{!-- {{#if logged_in}} --}}
+                {{#if logged_in}}
                 <article class="media">
                   <figure class="media-left">
                     <p class="image is-64x64">
@@ -402,7 +400,9 @@
                     </div>
                   </div>
                 </article>
-                {{!-- {{#/if}} --}}
+                {{else}}
+                    <a href="/login">You must login before you can comment.</a>
+                {{/if}}
               </div>
             </div>
           </div>
@@ -411,9 +411,9 @@
       </section>
     </main>
 
-    <script src="../public/js/login.js"></script>
-    <script src="../public/js/logout.js"></script>
-    <script src="../public/js/profile.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/logout.js"></script>
+    <script src="/js/profile.js"></script>
 
 </body>
 </html>
