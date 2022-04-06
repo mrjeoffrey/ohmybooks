@@ -1,6 +1,5 @@
-# Project 2: A Real Estate Web Application
+# Project 2 : **Oh My Books!** Book Review Web Application
 
-(THIS IS A WORKING DRAFT)
 
 One of the hallmarks of the UCI Bootcamp is the opportunity it gives its students to plan and work on a web application in groups. This highlights the concepts and tools we have added to our growing arsenal of computer frameworks, languages, and technologies that will make us more employable, as well as showcase our ability to take on real projects, work with other developers, and simulate workplace situations and challenges. 
 
@@ -18,27 +17,35 @@ At the beginning of Project 2, we are assigned to our respective teams, and with
 
 * Instead of using the front end we developed for our first project, we will start from scratch. Doing so will help us reinforce our existing front-end abilities and solidify our understanding of the dynamic between the front end and back end. Also, this will likely improve our skills since that first project, so with a stronger foundation now we can build a better application, using all of the additional practice we have had in the last several weeks.
 
-## Real Estate Web Application (Project Name to follow)
-(Put project description here)
+## Oh My Books! A Book Review Web Application 
+
+While book reviews are a common feature on bookstore apps or online stores that sell books, there really isn't a web application that solely focuses on making users review particular books, the way Yelp does with restaurants and other businesses. It is with this thought and concept in mind that this project has come to fruition.
+
+Oh My Books! is a book review web application that allows users  to rate and post reviews of books users have read. The said books can be searched on the application's database, which currently features 100 titles with varying genres, to start with.
+
+To make a review, the user is required to create a user account and login into the page. To create an account, the user must provide his/her/their first name and last name, username, email, and password. Upon logging in and searching for the book to be reviewed, the user is presented with the page that contains information about the book to be reviewed as well as a link to the page where the user can write and post his or her review. The book page also contains links to affiliate sites that sell the book being reviewed, in addition to other merchandise that are related or relevant to the book. Thus, a book page about Harry Potter and the Chamber of Secrets will have affiliate links to online stores that sell the said title and the other books in the series, as well as Harry Potter-themed products like magic wands, witch's costumes and accessories, etc. 
+
+With users posting their reviews on a particular book, the book review application creates a community of readers with a shared passion for reading books, a particular author, or genre. Through the book review application, they are able to write their opinion on certain books and share their experience reading it. In the process, they educate other readers, encourage (and in some cases, discourage them from) reading a certain book, and build a robust discussion about books online. 
+
+For book authors, publishers, and sellers, the book review application has the capability to inform them how the reading public has received and viewed their books, and which types of stories, authors, or genres there is a current market for. Reviews, whether negative or positive, excite readers and give attention to the book being reviewed, as well as to the products, and in some cases, movies and music, that are relevant to it.
  
 
 ## User Story
 
 ```
-AS A person who is looking to buy his or her first home, refinance a present real estate property, or look for a possible property investment, 
+AS A person who is looking to share his or her opinion on a particular book he or she has previously read, or find the next book in his or her reading queue
 
-THE USER WANTS a web application that will allow him or her to enter basic personal information as a pre-requisite to filing an application to purchase or refinance a home or property
+THE USER WANTS a web application that will allow the user to rate and post a review on a book he or she has recently read, or read reviews on a book the user is interested in reading
 
-SO THAT the user can determine if he or she is qualified to purchase or refinance a home or property,
+SO THAT the user can inform other readers of his or her opinion, as well as experience reading the said book, while other users who have not read the book and are looking for information about it will know whether the book is good and worth purchasing (in some cases, checking out from the library) and reading.
 
-SO THAT the real estate company or agent can get in touch with the user to explore the possibility of him or her purchasing or refinancing a home or property through their company or agent, and assisting the user in the process of purchasing or refinancing a home or property. 
 ```
 
 ## Acceptance Criteria
 
 ```
-GIVEN the user is looking to purchase or refinance a home or property, 
-WHEN the user reads the prompt and clicks start, she is taken to the application's ...
+GIVEN the user is looking to rate and post a review on  a book he or she has recently read, 
+WHEN the user reads the prompt and clicks... , she is taken to the application's ...
 THEN the user is presented with... 
 WHEN the user ...
 THEN the user is presented with ...
