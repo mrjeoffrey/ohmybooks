@@ -28,82 +28,7 @@
 
 
     <!-- navbar -->
-    <nav class="navbar is-transparent is-fixed-top">
-      <!-- logo input -->
-      <div class="navbar-brand navbar-start">
-          <a class="navbar-item image is-128x128 logo">
-            <!-- <img class="has-ratio" src="./img/logo.png" alt="logo"> -->
-          </a>
-      </div>
-
-      <!-- genre menu -->
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <a class="navbar-item" href="#home">
-            Home
-          </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Genre
-            </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                Action
-              </a>
-              <a class="navbar-item">
-                Adventure
-              </a>
-              <a class="navbar-item">
-                Classics
-              </a>
-              <a class="navbar-item">
-                Fantasy
-              </a>
-              <a class="navbar-item">
-                Graphic Novel
-              </a>
-              <a class="navbar-item">
-                Horror
-              </a>
-              <a class="navbar-item">
-                Mystery/Thriller
-              </a>
-              <a class="navbar-item">
-                Non-Fiction
-              </a>
-              <a class="navbar-item">
-                Romance
-              </a>
-              <a class="navbar-item">
-                Science Fiction
-              </a>
-            </div>
-          </div>
-
-            <!-- search bar -->
-            <div class="navbar-item">
-              <input class="input" type="text" placeholder="Search">
-            </div>
-
-              <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <div class="navbar-item">
-          <div class="buttons">
-            <a href="/login" class="button">
-              Log In
-            </a>
-        </div>
-        
-        {{/if}}
-
-        </div>
-      </div>
-
-    </nav>
+    {{> navbar}}
 
     <hr>
 
@@ -115,15 +40,7 @@
     
     <!-- media card section for our names    -->
     <!-- footer -->
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-        </p>
-      </div>
-    </footer>
+   {{> footer}}
 
     <!-- Render script for logged in users only -->
   {{#if logged_in}}
