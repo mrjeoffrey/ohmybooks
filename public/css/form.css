@@ -34,7 +34,7 @@ section{
     font-weight: 300;
     margin-top: 40px; 
 }
-.login{
+.loginbtn{
     position: absolute;
     padding: 50px 50px; 
     text-align: center; 
@@ -51,13 +51,13 @@ section{
     border-radius: 8px;
     backdrop-filter:blur(30px);
 }
-.login h4{
+.loginbtn h4{
     font-size: 20px; 
     font-weight: 600;
     letter-spacing: 2px;
     color: yellow;
 }
-.login p{
+.loginbtn p{
     font-size: 10px;
     color: #d7f52b;
     margin-bottom: 100px; 
@@ -85,7 +85,7 @@ section{
     letter-spacing: 1px; 
     color: #efff93;    
 }
-.button {
+.logbtn {
     position: relative; 
     cursor: pointer; 
     background: #c0dc20;
@@ -100,7 +100,7 @@ section{
     margin-top: 30px; 
     transition: all 0.2s ease-in-out;
 }
-.button:hover{
+.logbtn:hover{
     background-color: #cfee21;
     box-shadow: 0 3px 8px 2px rgb(99 99 99 / 30%); 
     transition: all 0.2s ease-in-out;
