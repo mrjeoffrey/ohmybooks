@@ -1,68 +1,65 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-    <div class="row">
-        <div
-        class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4"
-        >
-        <h1 class="mb-3 text-center">Signing up is easy.</h1>
-        <p class="lead">
-            It's free and you don't have to share your address.
-        </p>
-        <form class="mb-3">
-            <div class="row">
-            <div class="form-group col-12 col-sm-6">
-                <label for="firstName">First name:</label>
-                <input
-                type="text"
-                class="form-control"
-                placeholder="First name"
-                id="firstName"
-                />
-            </div>
-            <div class="form-group col-12 col-sm-6">
-                <label for="lastName">Last name:</label>
-                <input
-                type="text"
-                class="form-control"
-                placeholder="Last name"
-                id="lastName"
-                />
-            </div>
-            </div>
-            <div class="form-group">
-            <label for="email">Email:</label>
-            <input
-                type="email"
-                class="form-control"
-                placeholder="example@example.com"
-                id="email"
-                required
-            />
-            </div>
-            <div class="form-group">
-            <label for="password">Password:</label>
-            <input
-                type="password"
-                class="form-control"
-                id="password"
-                required
-            />
+<main class="hero container">
+    <section class="columns is-centered">
+        <div class="hero-body column is-6">
+            <section class="section">
+                <h1 class="title">Section</h1>
+                <h2 class="subtitle">
+                    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading.
+                </h2>
+            </section>
+            <div class="field">
+                <label class="label"></label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Enter your name">
+                </div>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block mb-3">
-            Create account
-            </button>
-            <div class="alert alert-info small" role="alert">
-            By clicking above you agree to our
-            <a href="#" class="alert-link">Terms &amp; Conditions</a> and
-            our <a href="#" class="alert-link">Privacy Policy</a>.
+            <div class="field">
+                <label class="label"></label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-success" type="text" placeholder="Enter your username">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                    </span>
+                </div>
+                <p class="help is-success">This username is available</p>
             </div>
-            <div class="text-center">
-            <p>or ...</p>
-            <a href="#" class="btn btn-success">Login</a>
+
+                <div class="field">
+                <label class="label"></label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-danger" type="email" placeholder="Enter your email">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+                <p class="help is-danger">This email is invalid</p>
+                </div>
+
+                <div class="field">
+                <div class="control">
+                    <label class="checkbox">
+                    <input type="checkbox">
+                    I agree to the <a href="#">terms and conditions</a>
+                    </label>
+                </div>
+                </div>
+
+                <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">Cancel</button>
+                </div>
             </div>
-        </form>
         </div>
-    </div>
-    </div>
-</div>
+    </section>
+    
+</main>
