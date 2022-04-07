@@ -1,0 +1,76 @@
+<nav class="navbar is-transparent is-fixed-top">
+      <!-- logo input -->
+      <div class="navbar-brand navbar-start">
+          <a class="navbar-item image is-128x128 logo">
+            <!-- <img class="has-ratio" src="./img/logo.png" alt="logo"> -->
+          </a>
+      </div>
+
+      <!-- genre menu -->
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a class="navbar-item" href="#home">
+            Home
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Genre
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                Action
+              </a>
+              <a class="navbar-item">
+                Adventure
+              </a>
+              <a class="navbar-item">
+                Classics
+              </a>
+              <a class="navbar-item">
+                Fantasy
+              </a>
+              <a class="navbar-item">
+                Graphic Novel
+              </a>
+              <a class="navbar-item">
+                Horror
+              </a>
+              <a class="navbar-item">
+                Mystery/Thriller
+              </a>
+              <a class="navbar-item">
+                Non-Fiction
+              </a>
+              <a class="navbar-item">
+                Romance
+              </a>
+              <a class="navbar-item">
+                Science Fiction
+              </a>
+            </div>
+          </div>
+
+            <!-- search bar -->
+            <div class="navbar-item">
+              <input class="input" type="text" placeholder="Search">
+            </div>
+
+              <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/login" class="button">
+              Log In
+            </a>
+        </div>
+        
+        {{/if}}
+
+        </div>
+      </div>
+
+    </nav>

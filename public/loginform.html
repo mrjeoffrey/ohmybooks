@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,37 @@
     <link rel="stylesheet" href="css/form.css">
 </head>
 <!-- base login form  -->
+
 <body>
-    <section>
-    <div class="container">
-    <div class="promotext">
-        <h3>Welcome</h3>
-        <h3>Back</h3>
-        <p>Let's find your next read</p>
-    </div>
-    <div class="login">
-        <h4>Login</h4>
-        <p> to your account </p>    
-        <div class="logbox">
-        <div class="inputbox">
-            <label class="username" for="username">Username </label>
-            <input class="form-input" type="text">
+    <section class="loginsctn">
+        <div class="container logincont">
+            <div class="promotext">
+                <h3>Welcome</h3>
+                <h3>Back</h3>
+                <p>Let's find your next read</p>
             </div>
-            <div class="inputbox">
-                <label class="password" for="password">Password </label>
-                <input type="password">
+            <div class="loginbtn login-form">
+                <h4>Login</h4>
+                <p> to your account </p>
+                <div class="logbox">
+                    <div class="inputbox">
+                        <label class="username" for="username-login">Username </label>
+                        <input class="form-input" type="text" id="username-login">
+                    </div>
+                    <div class="inputbox">
+                        <label class="password" for="password-login">Password </label>
+                        <input class="form-input" type="password" id="password-login">
+                    </div>
+                </div>
+                <button type="submit" class="button logbtn"> Log in </button>
+                <p>
+                    <a href="/signup"> or Sign Up here! </a>
+                </p>
+                <div class="bcimage"></div>
             </div>
         </div>
-   
-        <button type="submit" class="button"> Log in </button>
-        
-        <div class="bcimage"></div>
-    </div>
-    </div>
-    </div>
-</section>
+    </section>
+    <script src="./js/login.js"></script>
+
 </html>
 </body>
