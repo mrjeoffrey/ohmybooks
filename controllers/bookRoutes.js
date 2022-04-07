@@ -6,7 +6,7 @@ const { Book } = require('../models'); // bringing in the model
 router.get('/', async (req, res) => {
   try {
     const bookData = await Book.findAll({
-      attributes: ['title'],
+      attributes: ['title', 'book_id', 'description', 'author', 'genre'],
     });
 
     const books = bookData.map((book) => {
@@ -23,12 +23,19 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const bookData = await Book.findByPk(req.params.id, {
-      attributes: ['title'],
+      attributes: [
+        'title',
+        'book_id',
+        'description',
+        'author',
+        'genre',
+        'isbn',
+      ],
     });
 
     const books = bookData.get({ plain: true });
 
-    res.render('book2', books);
+    res.render('book-detail', books);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -38,7 +45,7 @@ router.get('/:id', async (req, res) => {
 router.get('/genre/:genre', async (req, res) => {
   try {
     const bookData = await Book.findAll({
-      attributes: ['title', 'genre'],
+      attributes: ['title', 'genre', 'book_id', 'description', 'author'],
       where: { genre: req.params.genre },
     });
 
