@@ -10,28 +10,28 @@ Book.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Title: {
+    title: {
       type: DataTypes.TEXT('long'),
     },
-    Description: {
+    description: {
       type: DataTypes.TEXT('long'),
     },
-    ISBN: {
+    isbn: {
       type: DataTypes.STRING,
     },
-    Genre: {
+    genre: {
       type: DataTypes.STRING,
     },
-    Author: {
+    author: {
       type: DataTypes.STRING,
     },
-    Publication: {
+    publication: {
       type: DataTypes.STRING,
     },
-    Rating: {
+    rating: {
       type: DataTypes.INTEGER,
     },
-    Comment: {
+    comment: {
       type: DataTypes.STRING,
     },
   },
