@@ -1,11 +1,12 @@
 const router = require('express').Router();
+const { request } = require('express');
 const { Book } = require('../models'); // bringing in the model
 
 // find all
 router.get('/', async (req, res) => {
   try {
     const bookData = await Book.findAll({
-      attributes: ['Title'],
+      attributes: ['title'],
     });
 
     const books = bookData.map((book) => {
@@ -22,13 +23,35 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const bookData = await Book.findByPk(req.params.id, {
-      attributes: ['Title'],
+      attributes: ['title'],
     });
 
     const books = bookData.get({ plain: true });
 
     res.render('book2', books);
   } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// find a specific genre
+router.get('/genre/:genre', async (req, res) => {
+  try {
+    const bookData = await Book.findAll({
+      attributes: ['title', 'genre'],
+      where: { genre: req.params.genre },
+    });
+
+    const books = bookData.map((book) => {
+      console.log(book.get({ plain: true }));
+      return book.get({ plain: true });
+    });
+
+    console.log(books);
+
+    res.render('book', { books });
+  } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
