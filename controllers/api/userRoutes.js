@@ -28,7 +28,7 @@ router.post('/login', async (req, res) => {
         email: req.body.email,
       },
     });
-    console.log('Jeoffrey', userData);
+    console.log('userdata', userData);
     if (!userData) {
       res
         .status(400)
@@ -38,7 +38,7 @@ router.post('/login', async (req, res) => {
 
     const validPassword = await userData.checkPassword(req.body.password);
 
-    console.log('Jeoffrey', validPassword);
+    console.log('validpassword', validPassword);
 
     if (!validPassword) {
       res
@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
         .json({ user: userData, message: 'You are now logged in!' });
     });
   } catch (err) {
-    console.log('Jeoffrey', err);
+    console.log('err', err);
     res.status(400).json(err);
   }
 });
