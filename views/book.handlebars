@@ -5,6 +5,20 @@
         </h2>
       </section>
 
+{{#each books as |book|}}
+    <div class="dish col-md-5">
+      
+      <p>
+        {{book.id}}.
+        {{book.title}}
+        {{book.description}}
+      </p>
+    </div>
+    <div class="col-md-7">
+      <p></p>
+    </div>
+  {{/each}}
+
     <!-- card for book sections -->
     <section class="columns">
         <div class="hero">
