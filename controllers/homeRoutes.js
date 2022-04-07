@@ -1,7 +1,6 @@
-// handles all routs from the homepage
-
+// handles all routs from the homepage /
 const router = require('express').Router();
-const { Project, User, Book } = require('../models');
+const { Comment, User, Book } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/book/:id', async (req, res) => {
@@ -25,7 +24,7 @@ router.get('/', async (req, res) => {
     //       attributes: ['name'],
     //     },
     //   ],
-    // });
+    //
 
     // Serialize data so the template can read it
     // const projects = projectData.map((project) => project.get({ plain: true }));
@@ -33,6 +32,27 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', {
       // projects,
+      logged_in: req.session.logged_in,
+    });
+
+    // router.get('/', async (req, res) => {
+    //   try {
+    //     // Get all comments and JOIN with user data
+    //     const commentData = await Comment.findAll({
+    //       include: [
+    //         {
+    //           model: User,
+    //           attributes: ['username'],
+    //         },
+    //       ],
+    //     });
+
+    // Serialize data so the template can read it
+    const comments = commentData.map((comment) => comment.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', {
+      comments,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -68,7 +88,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Comment }],
     });
 
     const user = userData.get({ plain: true });
