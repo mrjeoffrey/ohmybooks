@@ -1,3 +1,5 @@
+// handles all routs from the homepage
+
 const router = require('express').Router();
 const { Project, User, Book } = require('../models');
 const withAuth = require('../utils/auth');
