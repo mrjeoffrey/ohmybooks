@@ -1,8 +1,8 @@
 const path = require('path');
 const express = require('express');
-const session = require('express-session');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
+const session = require('express-session'); // need to track sessions
+const exphbs = require('express-handlebars'); // need for template engine
+const routes = require('./controllers'); // need fore routes
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
