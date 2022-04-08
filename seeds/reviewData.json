@@ -1,0 +1,213 @@
+[
+    {
+        "id": 1,
+        "rating": 5,
+        "review": "This is my basic review for this book. It's pretty basic.",
+        "user_id": 1,
+        "book_id": 1
+    },
+    {
+        "id": 2,
+        "rating": 3.5,
+        "review": "This is my another basic review for this book. It's still basic.",
+        "user_id": 1,
+        "book_id": 2
+    },
+    {
+        "id": 3,
+        "rating": 4.5,
+        "review": "Simple and clear, very attractive.",
+        "user_id": 2,
+        "book_id": 5
+    }, 
+    {
+        "id": 4,
+        "rating": 2.5,
+        "review": "Top notch all the way aroud.",
+        "user_id": 1,
+        "book_id": 3
+    },
+    {
+        "id": 5,
+        "rating": 3,
+        "review": "The idea behind the whole concept is wonderful.",
+        "user_id": 1,
+        "book_id": 2
+    },
+    {
+        "id": 6,
+        "rating": 4,
+        "review": "Good read to start the new week.",
+        "user_id": 3,
+        "book_id": 7
+    },
+    {
+        "id": 7,
+        "rating": 5,
+        "review": "I enjoyed most of the chapters.",
+        "user_id": 1,
+        "book_id": 10
+    },
+    {
+        "id": 8,
+        "rating": 1.5,
+        "review": "Excellent collection of essays.",
+        "user_id": 3,
+        "book_id": 3
+    },
+    {
+        "id": 9,
+        "rating": 4,
+        "review": "Who needs a revew of just enjoys books about writing, ME!",
+        "user_id": 2,
+        "book_id": 9
+    },
+    {
+        "id": 10,
+        "rating": 2,
+        "review": "The best writing book I've read so far this month.",
+        "user_id": 2,
+        "book_id": 5
+    },
+    {
+        "id": 11,
+        "rating": 1,
+        "review": "It was a book that I couldn't put down.",
+        "user_id": 3,
+        "book_id": 7
+    },
+    {
+        "id": 12,
+        "rating": 3.5,
+        "review": "I liked the first 20 pages or so, but had to skim the rest.",
+        "user_id": 3,
+        "book_id": 6
+    },
+    {
+        "id": 13,
+        "rating": 5,
+        "review": "I liked it, but not in a couldn't put it down sort of way.",
+        "user_id": 2,
+        "book_id": 11
+    },
+    {
+        "id": 14,
+        "rating": 1,
+        "review": "Excellent book of writing advice of life.",
+        "user_id": 1,
+        "book_id": 6
+    },
+    {
+        "id": 15,
+        "rating": 4,
+        "review": "Highly recommend for a more literary read.",
+        "user_id": 1,
+        "book_id": 9
+    },
+    {
+        "id": 16,
+        "rating": 4,
+        "review": "Wish I didn't need a reminder on this topic, but I do.",
+        "user_id": 2,
+        "book_id": 11
+    },
+    {
+        "id": 17,
+        "rating": 3,
+        "review": "Just could not get into the story or the main character.",
+        "user_id": 3,
+        "book_id": 7
+    },
+    {
+        "id": 18,
+        "rating": 2.5,
+        "review": "I highly recommend for short story lovers.",
+        "user_id": 3,
+        "book_id": 3
+    },
+    {
+        "id": 19,
+        "rating": 5,
+        "review": "One of the best, most clear set of reasons and reflections.",
+        "user_id": 2,
+        "book_id": 13
+    },
+    {
+        "id": 20,
+        "rating": 5,
+        "review": "I was extremely impressed with the depth and breadth of mystery.",
+        "user_id": 1,
+        "book_id": 7
+    },
+    {
+        "id": 21,
+        "rating": 2,
+        "review": "Below my expectations.",
+        "user_id": 2,
+        "book_id": 1
+    },
+    {
+        "id": 22,
+        "rating": 4,
+        "review": "A fantastic foray into an interesting genre from one of my favorite authors.",
+        "user_id": 2,
+        "book_id": 2
+    },
+    {
+        "id": 23,
+        "rating": 4,
+        "review": "A highly satisfying read.",
+        "user_id": 3,
+        "book_id": 3
+    },
+    {
+        "id": 24,
+        "rating": 1,
+        "review": "Below my expectations.",
+        "user_id": 3,
+        "book_id": 4
+    },
+    {
+        "id": 25,
+        "rating": 5,
+        "review": "A highly satisfying read.",
+        "user_id": 1,
+        "book_id": 5
+    },
+    {
+        "id": 26,
+        "rating": 3,
+        "review": "Great start but needs more at the end.",
+        "user_id": 1,
+        "book_id": 6
+    },
+    {
+        "id": 27,
+        "rating": 4,
+        "review": "A fantastic foray into an interesting genre from one of my favorite authors.",
+        "user_id": 2,
+        "book_id": 7
+    },
+    {
+        "id": 28,
+        "rating": 3,
+        "review": "Great start but needs more at the end.",
+        "user_id": 2,
+        "book_id": 8
+    },
+    {
+        "id": 29,
+        "rating": 5,
+        "review": "Absolutely brilliant!",
+        "user_id": 3,
+        "book_id": 9
+    },
+    {
+        "id": 30,
+        "rating": 1,
+        "review": "Absolutely boring.",
+        "user_id": 3,
+        "book_id": 10
+    }
+
+]   

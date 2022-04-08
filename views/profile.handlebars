@@ -1,7 +1,18 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{username}}!</h2>
-  </div>
-</div>
-
-{{{ book }}}
+<section class="section mt-6 pt-6">
+        <h1 class="title">Welcome, {{username}}!</h1>
+        <h2 class="subtitle">
+          It's time to start writing reviews
+        </h2>
+        {{#each books as |book|}}
+    <div class="col-md-5">
+      
+      <p>
+        <strong>
+        {{book.title}}</strong> <br>
+        {{book.description}} <br><br>Genre: <strong>{{book.genre}}</strong>
+        <br>
+        <br>
+      </p>
+    </div>
+  {{/each}}
+      </section>

@@ -1,0 +1,20 @@
+<section class="section mt-6 pt-6">
+        <h1 class="title">Author</h1>
+        <h2 class="subtitle">
+          Here are some books available for review
+        </h2>
+        {{#each books as |book|}}
+    <div class="col-md-5">
+      
+      <p>
+        
+        <a href="/book/{{book.book_id}}"><strong>{{book.author}}</strong></a> <br>
+        {{book.title}} <br><br>Genre: <strong>{{book.genre}}</strong>
+        <br>
+        <br>
+      </p>
+    </div>
+  {{/each}}
+      </section>
+
+
