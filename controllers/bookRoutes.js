@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { request } = require('express');
 const { Book } = require('../models'); // bringing in the model
 
-// find all
+// find all books
 router.get('/', async (req, res) => {
   try {
     const bookData = await Book.findAll({

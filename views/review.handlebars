@@ -1,14 +1,21 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="pen">🖊️</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Post Your Comment</button>
-  </p>
-</div>
+<section class="section mt-6 pt-6">
+        <h1 class="title">Your library</h1>
+        <h2 class="subtitle">
+          Here are some books available for review
+        </h2>
+        {{#each reviews as |review|}}
+    <div class="col-md-5">
+      
+      <p>
+        <strong>
+        Rating: {{review.rating}} out of 5 </strong> <br>
+        {{review.review}} <br><br>ID: <strong>{{review.id}}</strong>
+        Created by: <strong>{{user.username}}</strong>
+        <br>
+        <br>
+      </p>
+    </div>
+  {{/each}}
+      </section>
+
+

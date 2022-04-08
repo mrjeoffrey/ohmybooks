@@ -19,7 +19,4 @@ Review.belongsTo(Book, {
   foreignKey: 'book_id',
 });
 
-// Book.belongsToMany(User, { through: Review });
-// User.belongsToMany(Book, { through: Review });
-
 module.exports = { User, Review, Book };
