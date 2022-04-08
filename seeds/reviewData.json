@@ -1,18 +1,16 @@
 [
     {
-      "name": "Music Near Me",
-      "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-      "editComment": true
+        "id": 1,
+        "rating": 5,
+        "review": "This is my basic review for this book. It's pretty basic.",
+        "user_id": 1,
+        "book_id": 1
     },
     {
-      "name": "The Ultimate Tech Quiz",
-      "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-      "editComment": true
-    },
-    {
-      "name": "Roll 'Em Up",
-      "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-      "editComment": true
-    }
-  ]
-  
+        "id": 2,
+        "rating": 3.5,
+        "review": "This is my another basic review for this book. It's still basic.",
+        "user_id": 1,
+        "book_id": 2
+      }
+]
