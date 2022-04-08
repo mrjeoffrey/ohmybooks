@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const Book = require('../../models/Books');
 // const withAuth = require('../../utils/auth');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 // CREATE a book
 router.post('/', async (req, res) => {
@@ -35,5 +37,71 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// find a book
+// router.get('/search/:id', async (req, res) => {
+//   console.log('does it workkkk')
+//   try {
+//     const bookData = await Book.findAll({
+//       where: {
+//         [Op.or]: [
+//           {
+//             title: {
+//               [Op.like]: '%`${req.query.title}%`'
+//             }
+//           },
+//           {
+//             author: {
+//               [Op.like]: '%`${req.query.author}%`'
+//             }
+//           },
+//           {
+//             genre: {
+//               [Op.like]: '%`${req.query.genre}%`'
+//             }
+//           },
+//           {
+//             isbn: {
+//               [Op.like]: '%`${req.query.isbn}%`'
+//             }
+//           },
+//         ],
+//         // title: { [Op.like]: '%`${req.query.title}%`' },
+//         // author: { [Op.like]: '%`${req.query.author}%`' },
+//         // genre: { [Op.like]: '%`${req.query.genre}%`' },
+//         // isbn: { [Op.like]: '%`${req.query.isbn}%`' },
+//       },
+//       attributes: [
+//         'title',
+//         'author',
+//         'genre',
+//         'isbn',
+//       ]
+//     });
+
+//     console.log('bookdata', bookData);
+    
+//     const books = bookData.map((book) => {
+//       return book.get({ plain: true });
+//     });
+
+//     res.render('search', { books })
+//   } catch (err) {
+//     console.log(err)
+//     res.status(500).json(err);
+//   }
+// });
+
+// router.get('/search', (req, res) => {
+//   let { term } = req.params;
+
+//   // Make lowercase
+//   term = term.toLowerCase();
+
+//   Gig.findAll({ where: { technologies: { [Op.like]: '%' + term + '%' } } })
+//     .then(gigs => res.render('gigs', { gigs }))
+//     .catch(err => res.render('error', {error: err}));
+// });
+
 
 module.exports = router;

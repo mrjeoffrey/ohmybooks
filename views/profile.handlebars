@@ -1,11 +1,11 @@
 <section class="section mt-6 pt-6">
-        <h1 class="title">Welcome, {{username}}!</h1>
-        <h2 class="subtitle">
-          It's time to start writing reviews
-        </h2>
-        {{#each books as |book|}}
+  <h1 class="title">Welcome, {{username}}!</h1>
+  <h2 class="subtitle">
+    It's time to start writing reviews
+  </h2>
+
+  {{#each books as |book|}}
     <div class="col-md-5">
-      
       <p>
         <strong>
         {{book.title}}</strong> <br>
@@ -15,4 +15,21 @@
       </p>
     </div>
   {{/each}}
-      </section>
+  
+  {{#if reviews.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each reviews as |review|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{review.id}}">{{review.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{review.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</section>

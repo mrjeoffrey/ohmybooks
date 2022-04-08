@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { request } = require('express');
 const { Book } = require('../models'); // bringing in the model
 
+
 // find all
 router.get('/', async (req, res) => {
   try {
@@ -54,13 +55,11 @@ router.get('/genre/:genre', async (req, res) => {
       return book.get({ plain: true });
     });
 
-    console.log(books);
-
     res.render('book', { books });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
