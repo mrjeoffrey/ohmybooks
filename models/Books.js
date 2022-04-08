@@ -28,11 +28,8 @@ Book.init(
     publication: {
       type: DataTypes.STRING,
     },
-    rating: {
+    avgrating: {
       type: DataTypes.INTEGER,
-    },
-    comment: {
-      type: DataTypes.STRING,
     },
   },
   {

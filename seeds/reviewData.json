@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "rating": 5,
+      "review": "This is my basic review for this book. It's pretty basic.",
+      "user_id": 1,
+      "book_id": 1
+    },
+    {
+        "id": 2,
+        "rating": 3.5,
+        "review": "This is my another basic review for this book. It's still basic.",
+        "user_id": 1,
+        "book_id": 2
+      }
+]
