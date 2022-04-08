@@ -38,87 +38,81 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-router.get('/search/:isbn', async (req, res) => {
-  try {
-    console.log('does it workkkk')
-    const bookData = await Book.findAll({
-      attributes: ['title', 'genre', 'book_id', 'description', 'author'],
-      where: { 
-        [Op.or]: [
-          { title: req.params.title },
-          { author: req.params.author },
-          { genre: req.params.genre },
-          { isbn: req.params.isbn }
-        ]
-        
-      },
-    });
-
-    console.log('bookdata', bookData);
-
-    const books = bookData.map((book) => {
-      return book.get({ plain: true });
-    });
-
-    res.render('search', { books });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// find a book
-// router.get('/:isbn', async (req, res) => {
-//   console.log('does it workkkk')
+// router.get('/author/:author', async (req, res) => {
 //   try {
+//     console.log('does it workkkk')
 //     const bookData = await Book.findAll({
-//       where: {
-//         // [Op.or]: [
-//         //   {
-//         //     title: {
-//         //       [Op.like]: '%`${req.query.title}%`'
-//         //     }
-//         //   },
-//         //   {
-//         //     author: {
-//         //       [Op.like]: '%`${req.query.author}%`'
-//         //     }
-//         //   },
-//         //   {
-//         //     genre: {
-//         //       [Op.like]: '%`${req.query.genre}%`'
-//         //     }
-//         //   },
-//         //   {
-//         //     isbn: {
-//         //       [Op.like]: '%`${req.query.isbn}%`'
-//         //     }
-//         //   },
-//         // ],
-//         // title: req.query.title,
-//         // author: req.query.author,
-//         // genre: req.query.genre,
-//         isbn: req.query.isbn,
+//       attributes: ['title', 'genre', 'book_id', 'description', 'author'],
+//       where: { 
+//           author: req.params.author 
 //       },
-//       attributes: [
-//         'title',
-//         'author',
-//         'genre',
-//         'isbn',
-//       ]
 //     });
 
 //     console.log('bookdata', bookData);
-    
+
 //     const books = bookData.map((book) => {
 //       return book.get({ plain: true });
 //     });
 
-//     res.render('search', { books })
+//     res.render('search', { books });
 //   } catch (err) {
-//     console.log(err)
 //     res.status(500).json(err);
 //   }
 // });
+
+// find a book
+router.get('/author', async (req, res) => {
+  console.log('does it workkkk')
+  try {
+    const bookData = await Book.findAll({
+      where: {
+        // [Op.or]: [
+        //   {
+        //     title: {
+        //       [Op.like]: '%`${req.query.title}%`'
+        //     }
+        //   },
+        //   {
+            author: {
+              [Op.like]: '%`${req.query.author}%`'
+            }
+        //   },
+        //   {
+        //     genre: {
+        //       [Op.like]: '%`${req.query.genre}%`'
+        //     }
+        //   },
+        //   {
+        //     isbn: {
+        //       [Op.like]: '%`${req.query.isbn}%`'
+        //     }
+        //   },
+        // ],
+        // title: req.query.title,
+        // author: req.query.author,
+        // genre: req.query.genre,
+        // isbn: req.query.isbn,
+      },
+      attributes: [
+        'title',
+        'author',
+        'genre',
+        'isbn',
+      ]
+    });
+
+    console.log('bookdata', bookData);
+    
+    const books = bookData.map((book) => {
+      return book.get({ plain: true });
+    });
+
+    res.render('search', { books })
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+});
 
 // router.get('/search', (req, res) => {
 //   let { term } = req.query;
