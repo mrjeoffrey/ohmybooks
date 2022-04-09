@@ -1,3 +1,42 @@
+:root {
+  --cute: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--cute);
+}
+
 ul.menu-link li {
   list-style-type: none !important;
+}
+
+.logocard {
+  padding-left: 40px;
+  background: url(../img/logo.png);
+  background-size: cover;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* hero-home */
+.sectionbg {
+  background: url(../img/background4.jpg);
+}
+
+.boxradius {
+  border-radius: 90px;
+}
+
+.yellowbg {
+  background-color: #fdd28a;
+}
+
+.tealbg {
+  background-color: #98d4e1;
+}
+
+.whitebg {
+  background-color: #f3ece6;
 }

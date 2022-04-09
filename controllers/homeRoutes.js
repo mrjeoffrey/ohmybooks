@@ -94,34 +94,5 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-// router.get('/profile', (req, res) => {
-//   res.render('profile');
-// });
-
-
-// find a book
-// router.get('/search', async (req, res) => {
-//   try {
-//     const bookData = await Book.findAll({
-//       attributes: ['title', 'genre', 'book_id', 'description', 'author'],
-//       where: { 
-//         title: req.params.title, 
-//         genre: req.params.genre,
-//         description: req.params.description,
-//         author: req.params.author,
-//       },
-//     });
-
-//     const books = bookData.map((book) => {
-//       console.log(book.get({ plain: true }));
-//       return book.get({ plain: true });
-//     });
-
-//     res.render('book', { books });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 
 module.exports = router;
