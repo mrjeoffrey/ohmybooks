@@ -13,15 +13,15 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const review of reviewData) {
-    await Review.create({
-      ...review,
-    });
-  }
-
   for (const book of bookData) {
     await Book.create({
       ...book,
+    });
+  }
+
+  for (const review of reviewData) {
+    await Review.create({
+      ...review,
     });
   }
 
