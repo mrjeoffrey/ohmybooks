@@ -1,461 +1,966 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 2 Book website</title>
+    <!-- bulma link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/fix.css">
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/f513bbdf7f.js" crossorigin="anonymous"></script>
 
+
+
+    <title>Oh my Books!</title>
 </head>
+
 <body>
-    
-<!-- header section starts      -->
 
-<header>
+    <!-- Navigation -->
 
-    <a href="#" class="logo"><i class="fas fa-archway"></i>books.</a>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+                <strong>Oh My Books!</strong>
+            </a>
 
-    <nav class="navbar">
-        <a class="active" href="#home">home</a>
-        <a href="#review">books</a>
-        <a href="#about">about</a>
-        <a href="#review">review</a>
-        <a href="#order">order</a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Genre
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/book/genre/Adventure">
+                            Adventure
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Autobiography">
+                            Autobiography
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Biography">
+                            Biography
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Children%27s%20Fiction">
+                            Children's Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Classics">
+                            Classics
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Fantasy">
+                            Fantasy
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Fiction">
+                            Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Graphic%20Novel">
+                            Graphic Novel
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Historical%20Fiction">
+                            Historical Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Horror">
+                            Horror
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Thriller">
+                            Thriller
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Mystery%2fSuspense">
+                            Mystery/Suspense
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Manga">
+                            Manga
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Nonfiction">
+                            Nonfiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Romance">
+                            Romance
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Science%20Fiction">
+                            Science Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Young%20Adult">
+                            Young Adult
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Picture%20Book">
+                            Picture Book
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Self-Help">
+                            Self-Help
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Poetry">
+                            Poetry
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <div class="icons">
-        <i class="fas fa-bars" id="menu-bars"></i>
-        <i class="fas fa-search" id="search-icon"></i>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-shopping-cart"></a>
-    </div>
 
-</header>
 
-<!-- header section ends-->
 
-<!-- search form  -->
-
-<form action="" id="search-form">
-    <input type="search" placeholder="search here..." name="" id="search-box">
-    <label for="search-box" class="fas fa-search"></label>
-    <i class="fas fa-times" id="close"></i>
-</form>
-
-<!-- home section starts  -->
-
-<section class="home" id="home">
-
-    <div class="swiper-container home-slider">
-
-        <div class="swiper-wrapper wrapper">
-
-            <div class="swiper-slide slide">
-                <div class="content">
-                    <span>Editors top choice in book</span>
-                    <h3>Books of feather</h3>
-                    <p>"Incredible story"</p>
-                    <a href="#" class="btn">read now</a>
-                </div>
-                <div class="image">
-                    <img src="images/home-img-1.png" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <div class="content">
-                    <span>Book of the year</span>
-                    <h3>The Way to Win</h3>
-                    <p>"Breathtaking story writing."</p>
-                    <a href="#" class="btn">read now</a>
-                </div>
-                <div class="image">
-                    <img src="images/home-img-2.png" alt="">
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <div class="content">
-                    <span>Popular amongst young children</span>
-                    <h3>The mysterious Benedict Society</h3>
-                    <p>"Where adventure sets sail"</p>
-                    <a href="#" class="btn">read now</a>
-                </div>
-                <div class="image">
-                    <img src="images/home-img-3.png" alt="">
-                </div>
-            </div>
-
+    <!-- Hero-Home-->
+    <section class="hero is-medium is-link">
+        <div class="hero-body  container is-max-desktop">
+            <p class="title">
+                Oh my, books!
+            </p>
+            <p class="subtitle">
+                A place to rate & review books and get book recommendations from like-minded readers.
+            </p>
         </div>
+    </section>
 
-        <div class="swiper-pagination"></div>
-
-    </div>
-
-</section>
-
-<!-- home section ends -->
-
-<!-- books section starts  -->
-
-<section class="dishes" id="dishes">
-
-    <h3 class="sub-heading"> our books </h3>
-    <h1 class="heading"> popular books </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="images/book-1.png" alt="">
-            <h3>Increidble books</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$15.99</span>
-            <a href="#" class="btn">add to cart</a>
+    <!-- Hero-Genre-->
+    <section class="hero is-medium is-link">
+        <div class="hero-body  container is-max-desktop">
+            <p class="title">
+                Genre: <strong>{{Genre}}</strong>
+            </p>
+            <p class="subtitle">
+                A place to rate & review books and get book recommendations from like-minded readers.
+            </p>
         </div>
+    </section>
 
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="images/book-2.png" alt="">
-            <h3>Amazing books</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$15.99</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="images/book-3.png" alt="">
-            <h3>incredible book</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$15.99</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="images/book-4.png" alt="">
-            <h3>fun book</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$15.99</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="images/book-5.png" alt="">
-            <h3>interesting read</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$15.99</span>
-            <a href="#" class="btn">interesting read</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="images/book-6.png" alt="">
-            <h3>Popular among young teens</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$15.99</span>
-            <a href="#" class="btn">add to cart</a>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- books section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-    <h3 class="sub-heading"> about us </h3>
-    <h1 class="heading"> why our book review service? </h1>
-
-    <div class="row">
-
-        <div class="image">
-            <img src="images/about-img.png" alt="">
-        </div>
-
-        <div class="content">
-            <h3>most popular book review page in the world</h3>
-            <p>With over 10,000 concurrent people on our page, we are considered the top book website on the market and with the amount of users everyday we can confidently find out which book should be your next read. </p>
-            <div class="icons-container">
-                <div class="icons">
-                    <i class="fas fa-shipping-fast"></i>
-                    <span></span>
+    <!-- Hero-Login -->
+    <section class="hero is-medium is-info">
+        <div class="hero-body container is-max-desktop">
+            <div class="columns">
+                <div class="column">
+                    <p class="title">
+                        Login
+                    </p>
+                    <p class="subtitle">
+                        Sign in to add your review and get recommendations </p>
                 </div>
-                <div class="icons">
-                    <i class="fas fa-dollar-sign"></i>
-                    <span>easy payments</span>
-                </div>
-                <div class="icons">
-                    <i class="fas fa-headset"></i>
-                    <span>24/7 service</span>
-                </div>
-            </div>
-            <a href="#" class="btn">learn more</a>
-        </div>
 
-    </div>
-
-</section>
-
-<!-- about section ends -->
-
-
-<!-- book section ends -->
-
-<!-- review section starts  -->
-
-<section class="review" id="review">
-
-    <h3 class="sub-heading"> people's thoughts </h3>
-    <h1 class="heading"> what they say </h1>
-
-    <div class="swiper-container review-slider">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide slide">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-1.png" alt="">
-                    <div class="user-info">
-                        <h3>kyle kumar</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
+                <div class="column">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="password" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-success is-right">
+                                Login
+                            </button>
+                        </p>
                     </div>
                 </div>
-                <p>Incredible website with an enormous selection.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="swiper-slide slide">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-2.png" alt="">
-                    <div class="user-info">
-                        <h3>Mr.Jeoffrey </h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
+    <!-- Hero-SignUp -->
+    <section class="hero is-medium is-success">
+        <div class="hero-body container is-max-desktop">
+            <div class="columns">
+                <div class="column">
+                    <p class="title">
+                        Sign Up
+                    </p>
+                    <p class="subtitle">
+                        Create an account to add your review and get recommendations</p>
+                </div>
+
+                <div class="column">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="username" placeholder="Username">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="password" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-warning is-right">
+                                Sign Up
+                            </button>
+                        </p>
                     </div>
                 </div>
-                <p>I love the website, the comments, the books, and everything about this page!</p>
             </div>
+        </div>
+    </section>
 
-            <div class="swiper-slide slide">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-3.png" alt="">
-                    <div class="user-info">
-                        <h3>Allyson V. </h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+    <!-- Hero-Profile -->
+
+    <section class="hero is-warning is-halfheight">
+
+        <div class="hero-body container is-max-desktop">
+
+            <div class="columns">
+
+                <div class="columns content is-multiline">
+                    <div class="column is-full">
+                        <h1>
+                            Welcome, {{name}}!
+                        </h1>
+                    </div>
+
+                    <div class="column is-half">
+
+
+
+
+                        <div class="box content is-grouped is-grouped-right">
+                            <h4 class="subtitle">
+                                Top Pick For You
+
+                            </h4>
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-96x96">
+                                        <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>
+                                                Book Title
+                                            </strong> <br><small>by Author</small>
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                            sit
+                                            amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                        </p>
+                                        <small>Tom gave this 4 out of 5</small>
+                                    </div>
+
+                                </div>
+                            </article>
+
+                            <button class="button is-danger is-light">Add Review</button>
+
+
                         </div>
                     </div>
-                </div>
-                <p>Helped me find a book in an instant that was geared to my taste in books. </p>
-            </div>
 
-            <div class="swiper-slide slide">
-                <i class="fas fa-quote-right"></i>
-                <div class="user">
-                    <img src="images/pic-4.png" alt="">
-                    <div class="user-info">
-                        <h3>Jane</h3>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                    <div class="column is-half">
+                        <div class="box content">
+                            <h4><strong>Your Reviews</strong></h4>
+
+                            <p>Looks like you don't have any books you've reviewed. Search and add reviews now.</p>
+
+                            <div class="field is-grouped">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="Search">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info">
+                                        Search
+                                    </a>
+                                </p>
+                            </div>
+
                         </div>
+
+                        <br>
                     </div>
                 </div>
-                <p>I wasn't a book person until i stumbled upon this website, truly amazing work done by the developers!</p>
+
             </div>
 
         </div>
+        </div>
 
+    </section>
+
+
+    <!-- Sub Navigation - Not Logged In -->
+    <div class="tabs is-centered mt-5">
+        <ul>
+            <li class="is-active"><a>All</a></li>
+            <li><a>Recommended For You</a></li>
+            <li><a>Latest Reviews</a></li>
+            <li><a>Best New</a></li>
+        </ul>
     </div>
-    
-</section>
 
-<!-- review section ends -->
-
-<!-- order section starts  -->
-
-<section class="order" id="order">
-
-    <h3 class="sub-heading"> Any inquiries? </h3>
-    <h1 class="heading">  message us and we'll get back to you fast! </h1>
-
-    <form action="">
-
-        <div class="inputBox">
-            <div class="input">
-                <span>your name</span>
-                <input type="text" placeholder="enter your name">
-            </div>
-            <div class="input">
-                <span>your number</span>
-                <input type="number" placeholder="enter your number">
-            </div>
-        </div>
-        <div class="inputBox">
-            <div class="input">
-                <span>your book</span>
-                <input type="text" placeholder="enter book name">
-            </div>
-            
-
-        <input type="submit" value="order now" class="btn">
-
-    </form>
-
-</section>
-
-<!-- order section ends -->
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>locations</h3>
-            <a href="#">india</a>
-            <a href="#">japan</a>
-            <a href="#">russia</a>
-            <a href="#">USA</a>
-            <a href="#">france</a>
-        </div>
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="#">home</a>
-            <a href="#">books</a>
-            <a href="#">about</a>
-            <a href="#">reivew</a>
-            <a href="#">order</a>
-        </div>
-
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#">+408-914-5953</a>
-            <a href="#">Irvine, California</a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#">facebook</a>
-            <a href="#">twitter</a>
-            <a href="#">instagram</a>
-            <a href="#">linkedin</a>
-        </div>
-
+    <!-- Sub Navigation - Logged In -->
+    <div class="tabs is-centered mt-5">
+        <ul>
+            <li class="is-active"><a>All</a></li>
+            <li><a>Your Reviews</a></li>
+            <li><a>Recommended For You</a></li>
+            <li><a>Latest Reviews</a></li>
+            <li><a>Best New</a></li>
+        </ul>
     </div>
+    <!-- Add Review -->
+    <section class="section is-medium has-background-warning">
+        <div class="box">
+            <div class="columns">
+                <div class="column content p-6">
+                    <p class="title">
+                        Hi, <strong>{{name}}</strong>!
+                    </p>
+                    <p class="subtitle">
+                        Looking forward to your review of <strong>{{title}}</strong>.</p>
+                    <p>Thanks!</p>
+                    <p>Oh My Books Team</p>
+                </div>
+
+                <div class="column content p-6">
+                    <h4>Let's add your review</h4>
+                    <div class="field">
+                        <p class="control">
+                            <label class="label">What do you have to share about this book?</label>
+                            <input class="input" type="text" placeholder="My thoughts are ...">
+
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <label class="label">What would you rate this out of 5?</label>
+                            <input class="input" type="text" placeholder="I would rate this ... out of 5">
+
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-warning is-right">
+                                Submit
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Search Results: All Book-->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Search: All Books</h1>
+            <hr>
+
+            <div class="columns is-multiline">
+                <div class="column is-three-fourths">
+
+                    <article class="media">
+                        <div class="media-left">
+                            <figure class="image is-96x96">
+                                <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <strong>
+                                        Book Title
+                                    </strong> <br><small>by <strong>Author</strong></small>
+                                    <br>
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                    amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                </p>
+                                <small>ISBN: <strong>{{ISBN}}</strong> • Genre: <strong>{{Genre}}</strong></small>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+                <div class="column is-one-fourth">
 
 
-</section>
+                    <div class="content">
+                        <p>
+                            <strong>
+                                Latest Reviews
+                            </strong><br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                            amet massa fringilla egestas. Nullam condimentum luctus turpis.
 
-<!-- footer section ends -->
+                        </p>
+                        <small><strong>Tom</strong> gave this <strong>4</strong> out of <strong>5</strong></small>
+                    </div>
+                    <button class="button is-danger is-light">Add Review</button>
 
-<!-- loader part  -->
-<div class="loader-container">
-    <img src="images/loader.gif" alt="">
-</div>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
+            </div>
+            <hr class="mb-6">
 
 
 
+        </div>
+    </section>
+
+    <!--BookDetail: Reviews-->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Latest Reviews</h1>
+            <hr class="mb-6">
+
+            <div class="columns is-multiline">
+                <div class="column is-three-fourths">
+
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            <div class="box p-6">
+                                <div class="content">
+                                    <p>
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                        sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>By <strong>{{User}}</strong> • Rating: <strong>4/5</strong></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-third">
+                            <div class="box p-6">
+                                <div class="content">
+                                    <p>
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                        sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>By <strong>{{User}}</strong> • Rating: <strong>4/5</strong></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-third">
+                            <div class="box p-6">
+                                <div class="content">
+                                    <p>
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                        sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>By <strong>{{User}}</strong> • Rating: <strong>4/5</strong></small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <hr>
 
 
 
+                </div>
 
 
+    </section>
+
+    <!-- Content-1 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Your Reviews</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Delete</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Delete</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Delete</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content-2 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Recommended For You</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content-3 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Latest Reviews</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content-4 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Best New</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="footer p-6">
+        <div class="content is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <h3>Oh My Books!</h3>
+                    <p>This app was designed and developed by Jane, Allyson, Kyle, Jully & Jeoffrey and is shared with
+                        the whole world.</p>
 
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+                    <aside class="menu mt-5">
+                        <p class="menu-label">
+                            Meet The Developers
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Jane</a></li>
+                            <li><a>Allyson</a></li>
+                            <li><a>Kyle</a></li>
+                            <li><a>Jully</a></li>
+                            <li><a>Jeoffrey</a></li>
+                        </ul>
+                    </aside>
+
+                </div>
+                <div class="column is-one-fourth">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            About
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Recommended For You</a></li>
+                            <li><a>Top Rated</a></li>
+                            <li><a>Best New</a></li>
+                        </ul>
+                        <p class="menu-label">
+                            Resources
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>API Link</a></li>
+                            <li><a>Node.JS</a></li>
+                            <li><a>Express.JS</a></li>
+                            <li><a>Handlebars</a></li>
+                            <li><a>Repo Link</a></li>
+                            <li><a>Heroku Link</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="column is-one-fourth">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            Genre
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Action</a></li>
+                            <li><a>Adventure</a></li>
+                            <li><a>Classics</a></li>
+                            <li><a>Fantasy</a></li>
+                            <li><a>Graphic Novels</a></li>
+                            <li><a>Horror</a></li>
+                            <li><a>Mystery</a></li>
+                            <li><a>Non-Fiction</a></li>
+                            <li><a>Romance</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>

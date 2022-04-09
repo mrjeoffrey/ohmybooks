@@ -24,39 +24,24 @@
 {{/each}}
  --}}
 
-<!-- tabs -->
-<div class="tabs is-boxed mt-6 pt-6">
-  <ul>
-    <li class="is-active">
-      <a>
-        <span class="icon is-small"><i class="fa-solid fa-face-smile"></i></span>
-        <span>Top Rated</span>
-      </a>
-    </li>
-    <li>
-      <a>
-        <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
-        <span>Best New</span>
-      </a>
-    </li>
-    <li>
-      <a>
-        <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
-        <span>Recommended For You</span>
-      </a>
-    </li>
-    <li>
-      <a>
-        <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
-        <span>Documents</span>
-      </a>
-    </li>
-  </ul>
-</div>
+{{> hero-home}}
+
+{{> subnav}}
 
 <!-- cover -->
+{{#if logged_in}}
+{{> uni-yourreviews}}
+{{> uni-recommended}}
+{{> uni-latestreviews}}
+{{> uni-bestnew}}
 
-{{> hero}}
+     {{else}}
+
+{{> uni-recommended}}
+{{> uni-latestreviews}}
+{{> uni-bestnew}}
+
+ {{/if}}
 
 <!--<div class="hero">
   <a class="hero-background image is-3by1 cover">

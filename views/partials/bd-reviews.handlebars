@@ -1,0 +1,41 @@
+    <section class="section is-small">
+        <div class="container is-max-desktop ">
+
+            <h1 class="title">Latest Reviews</h1>
+            <hr class="mb-6">
+
+  
+
+                    <div class="columns is-multiline">
+
+                        {{#each reviews as |review|}}
+                        <div class="column is-one-third">
+                            <div class="box p-6">
+                                <div class="content">
+                                    <p>
+
+                                        {{review.review}}
+
+                                    </p>
+                                    <small>By <strong>{{review.id}}</strong> • Rating: <strong>{{review.rating}}/5</strong></small>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                        
+
+                    </div>
+
+
+                    <hr>
+
+
+
+        </div>
+       
+
+    </section>
+
+
+
+
