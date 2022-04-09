@@ -1,8 +1,9 @@
- <!--Search Results: All Book-->
+
+<!--Search Results: All Book-->
     <section class="section is-small">
         <div class="container is-max-desktop">
 
-            <h1 class="title">Search: All Books</h1>
+            <h1 class="title">Books</h1>
             <hr>
 
 {{#each books as |book|}}
@@ -46,7 +47,11 @@
                         </p>
                         <small><strong>Tom</strong> gave this <strong>4</strong> out of <strong>5</strong></small>
                     </div>
-                    <button class="button is-danger is-light">Add Review</button>
+                    {{#if logged_in}}
+                                <button class="button is-danger is-light">Add Review</button>
+                                {{else}}
+                                <button class="button is-text is-light"><a href="/login">Log in to add a review</a></button>
+                                {{/if}}
 
                 </div>
 
