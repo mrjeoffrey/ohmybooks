@@ -10,13 +10,13 @@ ul.menu-link li {
   list-style-type: none !important;
 }
 
-.subtitle {
-  font-size: 1rem !important;
-}
-
 .logocard {
   background: url(../img/logo.png);
   background-size: cover;
+}
+
+.subtitle {
+  font-size: 1rem !important;
 }
 
 footer li {

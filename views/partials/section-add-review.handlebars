@@ -1,5 +1,5 @@
 <!-- Add Review -->
-    <section class="section is-medium has-background-warning">
+    <section class="section is-medium yellowbg">
         <div class="box">
             <div class="columns">
                 <div class="column content p-6">
@@ -12,31 +12,32 @@
                     <p>Oh My Books Team</p>
                 </div>
 
-                <div class="column content p-6">
+                <form class="column content p-6 new-review-form">
                     <h4>Let's add your review</h4>
                     <div class="field">
                         <p class="control">
                             <label class="label">What do you have to share about this book?</label>
-                            <input class="input" type="text" placeholder="My thoughts are ...">
+                            <input class="input" id="review-desc" type="text" name="review-rating" placeholder="My thoughts are ...">
 
                         </p>
                     </div>
                     <div class="field">
                         <p class="control">
                             <label class="label">What would you rate this out of 5?</label>
-                            <input class="input" type="text" placeholder="I would rate this ... out of 5">
+                            <input class="input" type="number" id="review-rating" name="review-desc" placeholder="I would rate this ... out of 5">
 
                         </p>
                     </div>
 
                     <div class="field">
                         <p class="control">
-                            <button class="button is-warning is-right">
+                            <button class="button is-warning is-right submitBtn" type="submit">
                                 Submit
                             </button>
                         </p>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
+    
