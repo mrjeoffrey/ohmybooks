@@ -5,16 +5,25 @@
         </h2>
         {{#each books as |book|}}
     <div class="col-md-5">
-      
+      <div class="box mb-5">
       <p>
-        
         <a href="/book/{{book.book_id}}"><strong>{{book.title}}</strong></a> <br>
         {{book.description}} <br><br>Genre: <strong>{{book.genre}}</strong>
         <br>
         <br>
       </p>
+
+    <button class="button">Add Review</button>
+
+      </div>
     </div>
+
+
+
+
   {{/each}}
       </section>
+
+
 
 

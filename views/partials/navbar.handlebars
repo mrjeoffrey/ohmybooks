@@ -86,18 +86,20 @@
             <input class="input" type="text" placeholder="Search">
           </div>
 
-            <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-          <a href="/profile">profile</a> |
-          <button class="no-button" id="logout">logout</button>
-          {{else}}
-          <div class="navbar-item">
-            <div class="buttons">
-              <a href="/login" class="button">
-                Log In
-              </a>
-          </div>
-          {{/if}}
+              <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        
+        <a class="navbar-item" href="/profile">Profile</a>
+        <button class="no-button" id="logout">Logout</button>
+        {{else}}
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/login" class="button">
+              Log In
+            </a>
+        </div>
+        
+        {{/if}}
 
         </div>
       </div>
