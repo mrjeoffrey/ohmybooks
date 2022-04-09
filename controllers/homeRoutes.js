@@ -6,14 +6,27 @@ const Op = Sequelize.Op;
 
 router.get('/', async (req, res) => {
   try {
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        }
+      ]
+    })
+
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+
     // Pass serialized data and session flag into template
     res.render('homepage', {
+      reviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -35,53 +48,40 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-// router.get('/review', async (req, res) => {
-//   try {
-//     // Get all reviews and JOIN with user data
-//     const reviewData = await Review.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
-
-//     // Serialize data so the template can read it
-//     const reviews = reviewData.map((review) => review.get({ plain: true }));
-
-//     // Pass serialized data and session flag into template
-//     res.render('review', { 
-//       reviews, 
-//       logged_in: req.session.logged_in 
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 // user reviews
 router.get('/review/:id', async (req, res) => {
   try {
     const reviewData = await Review.findByPk(req.params.id, {
+      attributes: [
+          'rating',
+          'review',
+          'user_id',
+          'book_id',
+          'id'
+      ],
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['id'],
         },
       ],
     });
 
-    const review = reviewData.get({ plain: true });
+    const reviews = reviewData.get({ plain: true });
 
-    res.render('review', {
-      ...review,
+    console.log('REVIEWSSS!!!!', reviews);
+
+    res.render('profile', {
+      ...reviews,
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.log('ERROR!!!!!', err);
     res.status(500).json(err);
   }
 });
+
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
