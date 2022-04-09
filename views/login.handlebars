@@ -1,9 +1,24 @@
-<link rel="stylesheet" href="css/form.css">
+{{!-- <link rel="stylesheet" href="css/form.css"> --}}
 
 <!-- base login form  -->
 <body>
 
 {{> hero-login}}
+
+{{#if logged_in}}
+{{> uni-yourreviews}}
+{{> uni-recommended}}
+{{> uni-latestreviews}}
+{{> uni-bestnew}}
+
+     {{else}}
+
+{{> uni-recommended}}
+{{> uni-latestreviews}}
+{{> uni-bestnew}}
+
+ {{/if}}
+
 
     {{!-- <section class="loginsctn">
         <div class="container logincont">
