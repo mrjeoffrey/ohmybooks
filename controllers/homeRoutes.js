@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { Review, User } = require('../models');
 const withAuth = require('../utils/auth');
-const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
+const { Op,  Sequelize } = require('sequelize');
 
 router.get('/', async (req, res) => {
   try {
@@ -58,14 +57,10 @@ router.get('/review/:id', async (req, res) => {
           'user_id',
           'book_id',
           'id'
-      ],
-      include: [
-        {
-          model: User,
-          attributes: ['id'],
-        },
-      ],
+      ]
     });
+
+    console.log('REVIEW DATAAAAAA!!!', reviewData);
 
     const reviews = reviewData.get({ plain: true });
 
@@ -101,9 +96,9 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/profile', (req, res) => {
-  res.render('profile');
-});
+// router.get('/profile', (req, res) => {
+//   res.render('profile');
+// });
 
 
 // find a book

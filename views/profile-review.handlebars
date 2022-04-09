@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
 
@@ -14,8 +14,8 @@
         <input class="form-input" type="text" id="review-bookname" name="review-bookname" />
       </div>
       <div class="form-group">
-        <label for="rating">your rating:</label>
-        <input class="form-input" type="number" id="rating" name="rating" />
+        <label for="review-rating">your rating:</label>
+        <input class="form-input" type="number" id="review-rating" name="review-rating" />
       </div>
       <div class="form-group">
         <label for="review-desc">description:</label>
@@ -31,33 +31,33 @@
   <div class="col-md-6 review-list">
     <h3>Current Reviews:</h3>
 
-    {{#each reviews as |review|}}
+    {{!-- {{#each reviews as |review|}} --}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/review/{{review.id}}">{{bookreview.name}}</a></h4>
+        <h4><a href="/review/{{review.id}}">{{name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{review.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
       </div>
     </div>
-    {{/each}}
+    {{!-- {{/each}} --}}
   </div>
   {{!-- {{/if}} --}}
 </div>
 
-{{!-- <div class="text-center">
-  <h2>{{username}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.username}} on {{format_date date_created}}</p>
+{{!-- {{#each reviews as |review|}} --}}
+<div class="text-center">
+  <h2>{{id}}</h2>
+  <p>{{review}}</p>
+  <p>Created by {{username}}</p>
   <p>
     <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount rating}}</span>
+    <span class="dollar-amount">{{rating}}</span>
     needed
   </p>
   <p>
     <button class="btn btn-primary">Fund this Project!</button>
   </p>
-</div> --}}
-
+</div>
+{{!-- {{/each}} --}}
 <script src="./js/profile.js"></script>

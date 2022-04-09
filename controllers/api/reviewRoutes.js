@@ -10,8 +10,11 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
+    console.log('NEWREVIEWWWW!!!!', newReview);
+
     res.status(200).json(newReview);
   } catch (err) {
+    console.log('POST ERROR!!!!!', err)
     res.status(400).json(err);
   }
 });
