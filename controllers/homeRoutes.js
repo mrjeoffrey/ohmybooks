@@ -1,17 +1,31 @@
 const router = require('express').Router();
 const { Review, User } = require('../models');
 const withAuth = require('../utils/auth');
+const { Op,  Sequelize } = require('sequelize');
 
 router.get('/', async (req, res) => {
   try {
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        }
+      ]
+    })
+
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+
     // Pass serialized data and session flag into template
     res.render('homepage', {
+      reviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -29,6 +43,35 @@ router.get('/profile', withAuth, async (req, res) => {
       logged_in: true,
     });
   } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// user reviews
+router.get('/review/:id', async (req, res) => {
+  try {
+    const reviewData = await Review.findByPk(req.params.id, {
+      attributes: [
+          'rating',
+          'review',
+          'user_id',
+          'book_id',
+          'id'
+      ]
+    });
+
+    console.log('REVIEW DATAAAAAA!!!', reviewData);
+
+    const reviews = reviewData.get({ plain: true });
+
+    console.log('REVIEWSSS!!!!', reviews);
+
+    res.render('profile', {
+      ...reviews,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log('ERROR!!!!!', err);
     res.status(500).json(err);
   }
 });
@@ -51,8 +94,34 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/profile', (req, res) => {
-  res.render('profile');
-});
+// router.get('/profile', (req, res) => {
+//   res.render('profile');
+// });
+
+
+// find a book
+// router.get('/search', async (req, res) => {
+//   try {
+//     const bookData = await Book.findAll({
+//       attributes: ['title', 'genre', 'book_id', 'description', 'author'],
+//       where: { 
+//         title: req.params.title, 
+//         genre: req.params.genre,
+//         description: req.params.description,
+//         author: req.params.author,
+//       },
+//     });
+
+//     const books = bookData.map((book) => {
+//       console.log(book.get({ plain: true }));
+//       return book.get({ plain: true });
+//     });
+
+//     res.render('book', { books });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 
 module.exports = router;

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bulma link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <link rel="stylesheet" href="./css/fix.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/f513bbdf7f.js" crossorigin="anonymous"></script>
+
+
+
+    <title>Oh my Books!</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
+                <strong>Oh My Books!</strong>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Genre
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/book/genre/Adventure">
+                            Adventure
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Autobiography">
+                            Autobiography
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Biography">
+                            Biography
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Children%27s%20Fiction">
+                            Children's Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Classics">
+                            Classics
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Fantasy">
+                            Fantasy
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Fiction">
+                            Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Graphic%20Novel">
+                            Graphic Novel
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Historical%20Fiction">
+                            Historical Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Horror">
+                            Horror
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Thriller">
+                            Thriller
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Mystery%2fSuspense">
+                            Mystery/Suspense
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Manga">
+                            Manga
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Nonfiction">
+                            Nonfiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Romance">
+                            Romance
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Science%20Fiction">
+                            Science Fiction
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Young%20Adult">
+                            Young Adult
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Picture%20Book">
+                            Picture Book
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Self-Help">
+                            Self-Help
+                        </a>
+                        <a class="navbar-item" href="/book/genre/Poetry">
+                            Poetry
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Hero-Home-->
+    <section class="hero is-medium is-link">
+        <div class="hero-body  container is-max-desktop">
+            <p class="title">
+                Oh my, books!
+            </p>
+            <p class="subtitle">
+                A place to rate & review books and get book recommendations from like-minded readers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hero-Genre-->
+    <section class="hero is-medium is-link">
+        <div class="hero-body  container is-max-desktop">
+            <p class="title">
+                Genre: <strong>{{Genre}}</strong>
+            </p>
+            <p class="subtitle">
+                A place to rate & review books and get book recommendations from like-minded readers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Hero-Login -->
+    <section class="hero is-medium is-info">
+        <div class="hero-body container is-max-desktop">
+            <div class="columns">
+                <div class="column">
+                    <p class="title">
+                        Login
+                    </p>
+                    <p class="subtitle">
+                        Sign in to add your review and get recommendations </p>
+                </div>
+
+                <div class="column">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="password" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-success is-right">
+                                Login
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero-SignUp -->
+    <section class="hero is-medium is-success">
+        <div class="hero-body container is-max-desktop">
+            <div class="columns">
+                <div class="column">
+                    <p class="title">
+                        Sign Up
+                    </p>
+                    <p class="subtitle">
+                        Create an account to add your review and get recommendations</p>
+                </div>
+
+                <div class="column">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="username" placeholder="Username">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control has-icons-left">
+                            <input class="input" type="password" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-warning is-right">
+                                Sign Up
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero-Profile -->
+
+    <section class="hero is-warning is-halfheight">
+
+        <div class="hero-body container is-max-desktop">
+
+            <div class="columns">
+
+                <div class="columns content is-multiline">
+                    <div class="column is-full">
+                        <h1>
+                            Welcome, {{name}}!
+                        </h1>
+                    </div>
+
+                    <div class="column is-half">
+
+
+
+
+                        <div class="box content is-grouped is-grouped-right">
+                            <h4 class="subtitle">
+                                Top Pick For You
+
+                            </h4>
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-96x96">
+                                        <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>
+                                                Book Title
+                                            </strong> <br><small>by Author</small>
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                            sit
+                                            amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                        </p>
+                                        <small>Tom gave this 4 out of 5</small>
+                                    </div>
+
+                                </div>
+                            </article>
+
+                            <button class="button is-danger is-light">Add Review</button>
+
+
+                        </div>
+                    </div>
+
+                    <div class="column is-half">
+                        <div class="box content">
+                            <h4><strong>Your Reviews</strong></h4>
+
+                            <p>Looks like you don't have any books you've reviewed. Search and add reviews now.</p>
+
+                            <div class="field is-grouped">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="Search">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info">
+                                        Search
+                                    </a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+
+
+    <!-- Sub Navigation - Not Logged In -->
+    <div class="tabs is-centered mt-5">
+        <ul>
+            <li class="is-active"><a>All</a></li>
+            <li><a>Recommended For You</a></li>
+            <li><a>Latest Reviews</a></li>
+            <li><a>Best New</a></li>
+        </ul>
+    </div>
+
+    <!-- Sub Navigation - Logged In -->
+    <div class="tabs is-centered mt-5">
+        <ul>
+            <li class="is-active"><a>All</a></li>
+            <li><a>Your Reviews</a></li>
+            <li><a>Recommended For You</a></li>
+            <li><a>Latest Reviews</a></li>
+            <li><a>Best New</a></li>
+        </ul>
+    </div>
+    <!-- Add Review -->
+    <section class="section is-medium has-background-warning">
+        <div class="box">
+            <div class="columns">
+                <div class="column content p-6">
+                    <p class="title">
+                        Hi, <strong>{{name}}</strong>!
+                    </p>
+                    <p class="subtitle">
+                        Looking forward to your review of <strong>{{title}}</strong>.</p>
+                    <p>Thanks!</p>
+                    <p>Oh My Books Team</p>
+                </div>
+
+                <div class="column content p-6">
+                    <h4>Let's add your review</h4>
+                    <div class="field">
+                        <p class="control">
+                            <label class="label">What do you have to share about this book?</label>
+                            <input class="input" type="text" placeholder="My thoughts are ...">
+
+                        </p>
+                    </div>
+                    <div class="field">
+                        <p class="control">
+                            <label class="label">What would you rate this out of 5?</label>
+                            <input class="input" type="text" placeholder="I would rate this ... out of 5">
+
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-warning is-right">
+                                Submit
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Search Results: All Book-->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Search: All Books</h1>
+            <hr>
+
+            <div class="columns is-multiline">
+                <div class="column is-three-fourths">
+
+                    <article class="media">
+                        <div class="media-left">
+                            <figure class="image is-96x96">
+                                <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <strong>
+                                        Book Title
+                                    </strong> <br><small>by <strong>Author</strong></small>
+                                    <br>
+                                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                    amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                </p>
+                                <small>ISBN: <strong>{{ISBN}}</strong> • Genre: <strong>{{Genre}}</strong></small>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+                <div class="column is-one-fourth">
+
+
+                    <div class="content">
+                        <p>
+                            <strong>
+                                Latest Reviews
+                            </strong><br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                            amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                        </p>
+                        <small><strong>Tom</strong> gave this <strong>4</strong> out of <strong>5</strong></small>
+                    </div>
+                    <button class="button is-danger is-light">Add Review</button>
+
+                </div>
+
+            </div>
+            <hr class="mb-6">
+
+
+
+        </div>
+    </section>
+
+    <!--BookDetail: Reviews-->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Latest Reviews</h1>
+            <hr class="mb-6">
+
+            <div class="columns is-multiline">
+                <div class="column is-three-fourths">
+
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            <div class="box p-6">
+                                <div class="content">
+                                    <p>
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                        sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>By <strong>{{User}}</strong> • Rating: <strong>4/5</strong></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-third">
+                            <div class="box p-6">
+                                <div class="content">
+                                    <p>
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                        sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>By <strong>{{User}}</strong> • Rating: <strong>4/5</strong></small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-one-third">
+                            <div class="box p-6">
+                                <div class="content">
+                                    <p>
+
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
+                                        sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>By <strong>{{User}}</strong> • Rating: <strong>4/5</strong></small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <hr>
+
+
+
+                </div>
+
+
+    </section>
+
+    <!-- Content-1 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Your Reviews</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Delete</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Delete</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Delete</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content-2 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Recommended For You</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content-3 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Latest Reviews</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content-4 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 class="title">Best New</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                <button class="button is-danger is-light">Add Review</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer p-6">
+        <div class="content is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <h3>Oh My Books!</h3>
+                    <p>This app was designed and developed by Jane, Allyson, Kyle, Jully & Jeoffrey and is shared with
+                        the whole world.</p>
+
+                    <aside class="menu mt-5">
+                        <p class="menu-label">
+                            Meet The Developers
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Jane</a></li>
+                            <li><a>Allyson</a></li>
+                            <li><a>Kyle</a></li>
+                            <li><a>Jully</a></li>
+                            <li><a>Jeoffrey</a></li>
+                        </ul>
+                    </aside>
+
+                </div>
+                <div class="column is-one-fourth">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            About
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Recommended For You</a></li>
+                            <li><a>Top Rated</a></li>
+                            <li><a>Best New</a></li>
+                        </ul>
+                        <p class="menu-label">
+                            Resources
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>API Link</a></li>
+                            <li><a>Node.JS</a></li>
+                            <li><a>Express.JS</a></li>
+                            <li><a>Handlebars</a></li>
+                            <li><a>Repo Link</a></li>
+                            <li><a>Heroku Link</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="column is-one-fourth">
+                    <aside class="menu">
+                        <p class="menu-label">
+                            Genre
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Action</a></li>
+                            <li><a>Adventure</a></li>
+                            <li><a>Classics</a></li>
+                            <li><a>Fantasy</a></li>
+                            <li><a>Graphic Novels</a></li>
+                            <li><a>Horror</a></li>
+                            <li><a>Mystery</a></li>
+                            <li><a>Non-Fiction</a></li>
+                            <li><a>Romance</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+{{>navbar}}
+
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{username}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Review:</h3>
+
+    <form class="form new-review-form">
+      <div class="form-group">
+        <label for="review-bookname">book review name:</label>
+        <input class="form-input" type="text" id="review-bookname" name="review-bookname" />
+      </div>
+      <div class="form-group">
+        <label for="review-rating">your rating:</label>
+        <input class="form-input" type="number" id="review-rating" name="review-rating" />
+      </div>
+      <div class="form-group">
+        <label for="review-desc">description:</label>
+        <textarea class="form-input" id="review-desc" name="review-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{!-- {{#if reviews.length}} --}}
+  <div class="col-md-6 review-list">
+    <h3>Current Reviews:</h3>
+
+    {{!-- {{#each reviews as |review|}} --}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/review/{{review.id}}">{{name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+      </div>
+    </div>
+    {{!-- {{/each}} --}}
+  </div>
+  {{!-- {{/if}} --}}
+</div>
+
+{{!-- {{#each reviews as |review|}} --}}
+<div class="text-center">
+  <h2>{{id}}</h2>
+  <p>{{review}}</p>
+  <p>Created by {{username}}</p>
+  <p>
+    <span for="img" aria-label="money">💲</span>
+    <span class="dollar-amount">{{rating}}</span>
+    needed
+  </p>
+  <p>
+    <button class="btn btn-primary">Fund this Project!</button>
+  </p>
+</div>
+{{!-- {{/each}} --}}
+<script src="./js/profile.js"></script>
+
+{{>footer}}

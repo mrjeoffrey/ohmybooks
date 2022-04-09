@@ -1,0 +1,72 @@
+  <!-- Content-2 -->
+    <section class="section is-small">
+        <div class="container is-max-desktop">
+
+            <h1 id="recommended" class="title">Recommended For You</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                {{#if logged_in}}
+                                <button class="button is-danger is-light">Add Review</button>
+                                {{else}}
+                                <button class="button is-text is-light"><a href="/login">Log in to add a review</a></button>
+                                {{/if}}
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-96x96">
+                                    <img src="https://bulma.io/images/placeholders/320x480.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>
+                                            Book Title
+                                        </strong> <br><small>by Author</small>
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit
+                                        amet massa fringilla egestas. Nullam condimentum luctus turpis.
+
+                                    </p>
+                                    <small>Tom gave this 4 out of 5</small>
+                                </div>
+                                {{#if logged_in}}
+                                <button class="button is-danger is-light">Add Review</button>
+                                {{else}}
+                                <button class="button is-text is-light"><a href="/login">Log in to add a review</a></button>
+                                {{/if}}
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>

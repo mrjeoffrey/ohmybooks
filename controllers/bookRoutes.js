@@ -120,11 +120,8 @@ router.get('/genre/:genre', async (req, res) => {
       return book.get({ plain: true });
     });
 
-    console.log(books);
-
     res.render('book', { books });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });

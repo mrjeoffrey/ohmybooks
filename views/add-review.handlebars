@@ -1,0 +1,21 @@
+<section class="section mt-6 pt-6">
+        <h1 class="title">All Reviews</h1>
+        <h2 class="subtitle">
+          Here are some books available for review
+        </h2>
+        {{#each reviews as |review|}}
+    <div class="col-md-5">
+      
+      <p>
+        <strong>
+        Rating: {{review.rating}} out of 5 </strong> <br>
+        {{review.review}} <br><br>ID: <strong>{{review.id}}</strong>
+        Created by: <strong>{{user.username}}</strong>
+        <br>
+        <br>
+      </p>
+    </div>
+  {{/each}}
+      </section>
+
+
