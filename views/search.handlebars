@@ -1,19 +1,20 @@
-{{!-- {{#if title || author || genre || isbn}} --}}
-{{!-- {{#each books as |book|}} --}}
-  <section id="search" class="search-wrap">
-      <h1>Find A Book</h1>
-      <form action="/book/search" class="search-form">
-        <i class="fas fa-search"></i>
-        <input type="search" name="term" placeholder="Search by genre, title, author or isbn">{{}}
-        <input type="submit" value="Search">
-      </form>
-  </section>
-
+<section class="section mt-6 pt-6">
+        <h1 class="title">Your library</h1>
+        <h2 class="subtitle">
+          Here are some books available for review
+        </h2>
+        {{#each books as |book|}}
+    <div class="col-md-5">
+      
       <p>
-        <strong>{{title}}</strong> by <strong>{{author}}</strong><br><br>
-        {{description}}<br><br>
-        Genre <strong>{{genre}}</strong> • ISBN <strong>{{isbn}}</strong>
-       
+        
+        <a href="/book/{{book.book_id}}"><strong>{{book.title}}</strong></a> <br>
+        {{book.description}} <br><br>Genre: <strong>{{book.genre}}</strong>
+        <br>
+        <br>
       </p>
-{{!-- {{/each}} --}}
-{{!-- {{/if}} --}}
+    </div>
+  {{/each}}
+      </section>
+
+

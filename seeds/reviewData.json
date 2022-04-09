@@ -138,5 +138,76 @@
         "review": "I was extremely impressed with the depth and breadth of mystery.",
         "user_id": 1,
         "book_id": 7
-    }     
-]
+    },
+    {
+        "id": 21,
+        "rating": 2,
+        "review": "Below my expectations.",
+        "user_id": 2,
+        "book_id": 1
+    },
+    {
+        "id": 22,
+        "rating": 4,
+        "review": "A fantastic foray into an interesting genre from one of my favorite authors.",
+        "user_id": 2,
+        "book_id": 2
+    },
+    {
+        "id": 23,
+        "rating": 4,
+        "review": "A highly satisfying read.",
+        "user_id": 3,
+        "book_id": 3
+    },
+    {
+        "id": 24,
+        "rating": 1,
+        "review": "Below my expectations.",
+        "user_id": 3,
+        "book_id": 4
+    },
+    {
+        "id": 25,
+        "rating": 5,
+        "review": "A highly satisfying read.",
+        "user_id": 1,
+        "book_id": 5
+    },
+    {
+        "id": 26,
+        "rating": 3,
+        "review": "Great start but needs more at the end.",
+        "user_id": 1,
+        "book_id": 6
+    },
+    {
+        "id": 27,
+        "rating": 4,
+        "review": "A fantastic foray into an interesting genre from one of my favorite authors.",
+        "user_id": 2,
+        "book_id": 7
+    },
+    {
+        "id": 28,
+        "rating": 3,
+        "review": "Great start but needs more at the end.",
+        "user_id": 2,
+        "book_id": 8
+    },
+    {
+        "id": 29,
+        "rating": 5,
+        "review": "Absolutely brilliant!",
+        "user_id": 3,
+        "book_id": 9
+    },
+    {
+        "id": 30,
+        "rating": 1,
+        "review": "Absolutely boring.",
+        "user_id": 3,
+        "book_id": 10
+    }
+
+]   
