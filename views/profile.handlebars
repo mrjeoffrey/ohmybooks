@@ -8,8 +8,8 @@
     <div class="col-md-5">
       <p>
         <strong>
-        {{title}}</strong> <br>
-        {{description}} <br><br>Genre: <strong>{{genre}}</strong>
+        {{book.title}}</strong> <br>
+        {{book.description}} <br><br>Genre: <strong>{{book.genre}}</strong>
         <br>
         <br>
       </p>
@@ -46,8 +46,9 @@
     {{#each reviews as |review|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/review/{{review.id}}">{{review.review}}</a></h4>
-        {{review.rating}}
+        <h4><a href="/review/{{review.id}}">{{review.review}}</a>
+          <a>{{review.rating}} out of 5 </a>
+        </h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{review.id}}">DELETE</button>

@@ -1,18 +1,20 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#review-bookname').value.trim();
-  const reviewRating = document.querySelector('#review-rating').value.trim();
-  const description = document.querySelector('#review-desc').value.trim();
+  const title = document.querySelector('#review-bookname').value.trim();
+  const rating = document.querySelector('#review-rating').value.trim();
+  const review = document.querySelector('#review-desc').value.trim();
 
-  if (name && reviewRating && description) {
+  if (title && rating && review) {
     const response = await fetch(`/api/reviews`, {
       method: 'POST',
-      body: JSON.stringify({ name, reviewRating, description }),
+      body: JSON.stringify({ title, rating, review }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
+
+    console.log('RESPONSE!!!!!', response);
 
     if (response.ok) {
       document.location.replace('/profile');
@@ -21,6 +23,8 @@ const newFormHandler = async (event) => {
     }
   }
 };
+
+console.log('newformhandlerrrrr', newFormHandler);
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
