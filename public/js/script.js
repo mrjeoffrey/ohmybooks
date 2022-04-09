@@ -41,17 +41,7 @@ document.querySelector('#close').onclick = () =>{
 }
 
 var swiper = new Swiper(".home-slider", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 7500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  loop:true,
+  
 });
 
 var swiper = new Swiper(".review-slider", {
@@ -61,7 +51,7 @@ var swiper = new Swiper(".review-slider", {
     delay: 7500,
     disableOnInteraction: false,
   },
-  loop:true,
+  loop:false,
   breakpoints: {
     0: {
         slidesPerView: 1,
@@ -76,8 +66,7 @@ var swiper = new Swiper(".review-slider", {
       slidesPerView: 3,
     },
   },
-});
-
+});//
 function loader(){
   document.querySelector('.loader-container').classList.add('fade-out');
 }
